@@ -26,7 +26,7 @@ const Series = () => {
   return (
     <div className="bg-black">
       <div className="flex series-cover py-11 flex-col-reverse md:flex-row md:h-[70vh] items-center w-full bg-black p-3 text-white">
-        <div className="flex-1 space-y-4 md:ml-5 py-8  md:py-0">
+        <div className="flex-1 relative space-y-4 md:ml-5 py-8  md:py-0">
           <h1 className="underline-style text-[20px] text-blue-300 sm:text-3xl md:text-6xl mb-2">
             RIVERDALE
           </h1>
@@ -46,8 +46,14 @@ const Series = () => {
             assumenda cum aperiam cumque eatae?
           </p>
           <div className="space-x-5 pt-3">
-            <button className="bg-gray-600 px-20 py-1">Play</button>
-            <button className="bg-gray-600 px-20 py-1">Play</button>
+            <button className="bg-indigo-500 hover:bg-indigo-700 transition-all rounded-full px-20 py-1">Play</button>
+            <button className="bg-indigo-500 hover:bg-indigo-700 transition-all rounded-full px-20 py-1">Play</button>
+          </div>
+          <div>
+            <div className="absolute w-60 bg-white h-20 top-0 right-0"></div>
+            <div className="absolute w-60 bg-white h-20 bottom-11 right-0"></div>
+            <div className="absolute w-60 bg-white h-20 top-0 right-80"></div>
+            <div className="absolute w-60 bg-white h-20 bottom-11 right-80"></div>
           </div>
         </div>
       </div>

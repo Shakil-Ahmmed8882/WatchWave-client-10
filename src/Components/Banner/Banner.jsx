@@ -12,7 +12,7 @@ const Banner = () => {
           and whenever you want with our extensive collection of content.
         </p>
         <div className="flex sm:justify-center md:justify-start flex-col md:flex-row gap-3 my-5 md:mt-6 md:my-5 sm:items-center">
-          <button className="p-[6px] sm:p-3 w-[100%] sm:w-[80%] md:w-[50%] text-left underline md:underline-offset-0 md:text-[14px]  sm:text-center md:bg-primary-clr md:my-0 rounded-full">
+          <button className="p-[6px] sm:p-3 w-[100%] sm:w-[80%] md:w-[50%] text-left  md:text-[14px]  sm:text-center md:bg-indigo-500 text-white md:my-0 rounded-full">
             Browse our collection
           </button>
           <span className=" hidden sm:flex items-center arrow-container sm:justify-center">

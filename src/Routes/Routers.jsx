@@ -11,6 +11,7 @@ import Projects from "../Pages/Projects";
 import Private from "../🔒Private/Private";
 import Login from "../Pages/Forms/Login";
 import Page404 from "../Pages/404";
+import SignUp from "../Pages/Forms/SignUp";
 const router = createBrowserRouter([
       {
             path:'/',
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
                   {
                         path:'/login',
                         element:<Login></Login>
+                  },
+                  {
+                        path:'/sign-up',
+                        element:<SignUp></SignUp>
                   },
 
 
