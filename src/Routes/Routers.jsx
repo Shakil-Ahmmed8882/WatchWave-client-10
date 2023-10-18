@@ -9,6 +9,8 @@ import AddProducts from "../Pages/AddProduct";
 import MyCart from "../Pages/MyCart";
 import Projects from "../Pages/Projects";
 import Private from "../🔒Private/Private";
+import Login from "../Pages/Forms/Login";
+import Page404 from "../Pages/404";
 const router = createBrowserRouter([
       {
             path:'/',
@@ -39,6 +41,18 @@ const router = createBrowserRouter([
                         loader:({params})=> fetch(`http://localhost:1000/brand/${params.id}`),
                         element:<Projects></Projects>
                   },
+                  {
+                        path:'/login',
+                        element:<Login></Login>
+                  },
+
+
+
+                  // 404 page
+                  {
+                        path:'*',
+                        element:<Page404></Page404>
+                  }
 
             ]
       }

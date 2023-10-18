@@ -14,7 +14,7 @@ const AddProducts = () => {
   };
 
   return (
-    <div className="add-product-cover h-[200%] absolute top-0 -z-10 flex">
+    <div className="add-product-cover absolute top-0 -z-10 flex">
     <form onSubmit={handleBrand} className="p-8 my-auto mt-16 w-full lg:w-1/2 bg-[#000000cb] mx-auto">
       <div className="lg:flex gap-3">
         <div className="flex-1">

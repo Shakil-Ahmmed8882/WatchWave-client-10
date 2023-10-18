@@ -10,7 +10,7 @@ const Navbar = () => {
   </>
   return (
     <div>
-      <div className="navbar bg-transparent  text-white">
+      <div className="navbar bg-transparent  text-black">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -42,7 +42,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className=" hidden md:flex btn">Button</a>
+          <a className=" hidden md:flex btn">Login</a>
         </div>
       </div>
     </div>
