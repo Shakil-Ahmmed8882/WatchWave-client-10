@@ -7,7 +7,7 @@ h1{
   background: url("https://th.bing.com/th/id/R.4b051e5d69ed2f27c2b2295dade8426d?rik=XqJA%2fJAgRYqGSw&riu=http%3a%2f%2fstatic.guim.co.uk%2fsys-images%2fGuardian%2fPix%2fpictures%2f2014%2f9%2f3%2f1409755613016%2fFriends-season-10-014.jpg&ehk=u6KIb7oEbC2OskrdCMXkaUXhgRbF5v5MbLzugblZ5Co%3d&risl=&pid=ImgRaw&r=0");
 
   background-position: center;
-  background-size: 306%;
+  background-size: 340%;
   background-repeat: no-repeat;
   transition: all 0.4s linear;
 }
@@ -27,7 +27,7 @@ h1{
 }
 
 .bg-1:hover {
-  background-size: 311%;
+    background-size: 345%;
 }
 
 .bg-2:hover {

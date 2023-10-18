@@ -1,7 +1,48 @@
-h1{
-      line-height: 1.1 !important;
+h1 {
+  line-height: 1.1 !important;
 }
 
-p{
-      line-height: 1.6 !important;
+p {
+  line-height: 1.6 !important;
 }
+
+/* Series section style */
+
+@media screen and (max-width: 768px) {
+  .series-cover {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.588),
+        rgba(0, 0, 0, 0.576)
+      ),
+      url("https://th.bing.com/th/id/R.ba8cdef385f2d4fb48d9da97b2a7eb78?rik=K7bOqw4oM95ZpQ&pid=ImgRaw&r=0");
+    background-attachment: fixed;
+  }
+}
+
+.overlay{
+      width: 100%;
+      height: 0;
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(255, 255, 255, 0.654);
+      transition: height .3s linear;
+}
+
+.brand:hover .overlay{
+      height: 100%;
+}
+
+.brand:hover .brandName {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition-delay: 2s;
+      transition: all 1s linear;
+
+}
+
+
+      

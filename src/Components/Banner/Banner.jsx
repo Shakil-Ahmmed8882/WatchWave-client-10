@@ -146,7 +146,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <div className="md:grid w-full right-container hidden md:grid-cols-2 gap-3 flex-1 min-h-[80vh]">
+      <div className="md:grid w-full right-container hidden md:grid-cols-2 gap-3 flex-1 h-[90vh]">
         <div className=" bg-1 bg-cyan-300   rounded-xl  row-span-2">
           <div className="floating-text">
             <h1 className="font-bold my-1 text-[16px]">caption</h1>

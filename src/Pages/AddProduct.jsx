@@ -1,16 +1,13 @@
 const AddProducts = () => {
-      const handleBrand = e => {
-            e.preventDefault()
-            const formData = new FormData(e.target)
-            const name = formData.get('name')
-            const photo = formData.get('photo')
-            const newBrand = {name,photo}
-            
-
-            
-      }
+  const handleBrand = (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const photo = formData.get("photo");
+    const newBrand = { name, photo };
+  };
   return (
-      <form onSubmit={handleBrand} className="card-body">
+    <form onSubmit={handleBrand} className="card-body">
       <div className="form-control">
         <label className="label">
           <span className="label-text">Brand Name</span>
