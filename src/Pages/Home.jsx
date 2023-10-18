@@ -1,11 +1,12 @@
-import useAuth from "../Utils/AuthHelper";
+import Banner from "../Components/Banner/Banner";
 
+// import useAuth from "../Utils/AuthHelper";
+// const { name } = useAuth();
 const Home = () => {
-  const { name } = useAuth();
 
   return (
     <div>
-      <h1>Home {name}</h1>
+      <Banner></Banner>
     </div>
   );
 };

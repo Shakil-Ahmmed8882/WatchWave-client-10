@@ -1,4 +1,4 @@
-const AddProducts = () => {
+const AddBrands = () => {
       const handleBrand = e => {
             e.preventDefault()
             const formData = new FormData(e.target)
@@ -45,4 +45,4 @@ const AddProducts = () => {
   );
 };
 
-export default AddProducts;
+export default AddBrands;
