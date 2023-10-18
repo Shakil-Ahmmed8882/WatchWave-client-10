@@ -1,44 +1,117 @@
+
 const AddProducts = () => {
   const handleBrand = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    const name = formData.get("name");
-    const photo = formData.get("photo");
-    const newBrand = { name, photo };
+    const brandData = {}; // Create an object to hold input values
+
+    formData.forEach((value, key) => {
+      brandData[key] = value;
+    });
+
+
+
   };
+
   return (
-    <form onSubmit={handleBrand} className="card-body">
+    <div className="add-product-cover h-[200%] absolute top-0 -z-10 flex">
+    <form onSubmit={handleBrand} className="p-8 my-auto mt-16 w-full lg:w-1/2 bg-[#000000cb] mx-auto">
+      <div className="lg:flex gap-3">
+        <div className="flex-1">
+          {/* Image URL */}
+          <div className="form-control">
+            <label className="label">
+                <span className="label text-gray-400">Image URL</span>
+            </label>
+            <input
+              type="text"
+              className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
+              name="photo"
+              required
+            />
+          </div>
+          {/* Name */}
+          <div className="form-control">
+            <label className="label">
+                <span className="label text-gray-400">Name</span>
+            </label>
+            <input
+              type="text"
+              className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
+              name="name"
+              required
+            />
+          </div>
+          {/* Brand name */}
+          <div className="form-control">
+            <label className="label">
+                <span className="label text-gray-400">Brand Name</span>
+            </label>
+            <input
+              type="text"
+              className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
+              name="brand-name"
+              required
+            />
+          </div>
+        </div>
+        <div className="flex-1">
+          {/* Type */}
+          <div className="form-control">
+            <label className="label">
+                <span className="label text-gray-400">Type</span>
+            </label>
+            <input
+              type="text"
+              className=" bg-transparent outline-none my-3 bottom-line w-full" // Added w-full class
+              name="type"
+              required
+            />
+          </div>
+          {/* Price */}
+          <div className="form-control">
+            <label className="label">
+                <span className="label text-gray-400">Price</span>
+            </label>
+            <input
+              type="number"
+              className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
+              name="price"
+              required
+            />
+          </div>
+          {/* Short description */}
+          <div className="form-control">
+            <label className="label">
+                <span className="label text-gray-400">Short Description</span>
+            </label>
+            <input
+              type="text"
+              className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
+              name="description"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      {/* Rating */}
       <div className="form-control">
         <label className="label">
-          <span className="label-text">Brand Name</span>
+            <span className="label text-gray-400">Rating</span>
         </label>
         <input
-          type="text"
-          className="input input-bordered"
-          name="name"
+          type="number"
+          className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
+          name="rating"
           required
         />
       </div>
-      <div className="form-control">
-        <label className="label">
-          <span className="label-text">Image URL</span>
-        </label>
-        <input
-          type="text"
-          className="input input-bordered"
-          name="photo"
-          required
-        />
-        <label className="label">
-          <a href="#" className="label-text-alt link link-hover">
-            Forgot password?
-          </a>
-        </label>
-      </div>
+      {/* Submit Button */}
       <div className="form-control mt-6">
         <button className="btn btn-primary">Add</button>
       </div>
     </form>
+    </div>
   );
 };
 

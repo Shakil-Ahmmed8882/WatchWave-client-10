@@ -8,6 +8,7 @@ import Series from '../Pages/Series'
 import AddProducts from "../Pages/AddProduct";
 import MyCart from "../Pages/MyCart";
 import Projects from "../Pages/Projects";
+import Private from "../🔒Private/Private";
 const router = createBrowserRouter([
       {
             path:'/',
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
                   },
                   {
                         path:'/addProducts',
-                        element:<AddProducts></AddProducts>
+                        element:<Private><AddProducts></AddProducts></Private>
                   },
                   {
                         path:'/cart',
@@ -37,7 +38,8 @@ const router = createBrowserRouter([
                         path:'/brand/:id',
                         loader:({params})=> fetch(`http://localhost:1000/brand/${params.id}`),
                         element:<Projects></Projects>
-                  }
+                  },
+
             ]
       }
 ])

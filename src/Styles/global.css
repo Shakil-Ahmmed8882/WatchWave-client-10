@@ -8,19 +8,20 @@ p {
 
 /* Series section style */
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) { */
   .series-cover {
     width: 100%;
     height: 100%;
     background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.588),
-        rgba(0, 0, 0, 0.576)
+        to right,
+        rgba(0, 0, 0, 0.829),
+        rgba(0, 0, 0, 0.261)
       ),
       url("https://th.bing.com/th/id/R.ba8cdef385f2d4fb48d9da97b2a7eb78?rik=K7bOqw4oM95ZpQ&pid=ImgRaw&r=0");
     background-attachment: fixed;
+
   }
-}
+/* } */
 
 .overlay{
       width: 100%;
@@ -44,5 +45,18 @@ p {
 
 }
 
+/* add-product-cover */
+.add-product-cover{
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.901), rgba(0, 0, 0, 0.725)), url('https://media.istockphoto.com/id/137861322/photo/tv-media-panel.jpg?s=1024x1024&w=is&k=20&c=xCWE0-BqF1AzTlLvMKIVykbi-JYVNfkSf602C9CKd5o=');
 
-      
+  background-size: cover;
+  width: 100%;
+  min-height:108vh;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.bottom-line{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.176);
+}

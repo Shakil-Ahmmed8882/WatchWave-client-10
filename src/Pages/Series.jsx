@@ -25,7 +25,7 @@ const Series = () => {
   };
   return (
     <div className="bg-black">
-      <div className="flex series-cover flex-col-reverse md:flex-row md:h-[60vh] items-center w-full bg-black p-3 text-white">
+      <div className="flex series-cover py-11 flex-col-reverse md:flex-row md:h-[70vh] items-center w-full bg-black p-3 text-white">
         <div className="flex-1 space-y-4 md:ml-5 py-8  md:py-0">
           <h1 className="underline-style text-[20px] text-blue-300 sm:text-3xl md:text-6xl mb-2">
             RIVERDALE
@@ -49,13 +49,6 @@ const Series = () => {
             <button className="bg-gray-600 px-20 py-1">Play</button>
             <button className="bg-gray-600 px-20 py-1">Play</button>
           </div>
-        </div>
-        <div className="flex-1 h-[100%]">
-          <img
-            className="w-full hidden md:block h-[100%]"
-            src="https://th.bing.com/th/id/R.ba8cdef385f2d4fb48d9da97b2a7eb78?rik=K7bOqw4oM95ZpQ&pid=ImgRaw&r=0"
-            alt=""
-          />
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 -md:skew-x-12 perspective">
