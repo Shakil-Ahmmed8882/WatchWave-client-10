@@ -1,4 +1,5 @@
 import Banner from "../Components/Banner/Banner";
+import Footer from "../Components/Footer/Footer";
 import Series from "./Series";
 
 // import useAuth from "../Utils/AuthHelper";
@@ -11,6 +12,9 @@ const Home = () => {
       <Banner></Banner>
       </div>
         <Series></Series>
+        <div>
+          <Footer></Footer>
+        </div>
     </div>
   );
 };

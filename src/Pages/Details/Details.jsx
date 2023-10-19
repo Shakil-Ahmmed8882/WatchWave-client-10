@@ -1,5 +1,8 @@
 import { useParams } from "react-router-dom";
 import useAuth from "../../Utils/AuthHelper";
+import swal from 'sweetalert';
+import Swal from "sweetalert2";
+
 
 const Details = () => {
   const { name } = useParams();
@@ -33,7 +36,25 @@ const Details = () => {
 // Function to add to the cart
 const handleAddToCart = (e)=>{
       e.preventDefault()
-      
+      fetch('http://localhost:1000/movie',{
+            method:'POST',
+            headers:{
+                  'content-type':'application/json'
+            },
+            body:JSON.stringify(foundObject)
+      })
+      .then(res => res.json())
+      .then(data => {
+            if(data.insertedId){
+                  console.log('added data')
+                  Swal.fire(
+                        'Added!',
+                        'Thanks for staying in tuned',
+                        'success',
+                      )
+                  
+            }
+      })
 
 }
 

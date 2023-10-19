@@ -11,11 +11,7 @@ import {
 import auth from "../🔥 Firebase/Firebase.config";
 
 //||PROVIDERS
-  const googleProvider = new GoogleAuthProvider()
-
-
-
-
+const googleProvider = new GoogleAuthProvider();
 
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
@@ -23,8 +19,7 @@ const AuthProvider = ({ children }) => {
   const [brands, setBrands] = useState([]);
   const [loading, setLoading] = useState(true);
   const [authLoading, setAuthLoading] = useState(true);
-  const [user, setUser] = useState(null)
-
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:1000/")
@@ -37,7 +32,6 @@ const AuthProvider = ({ children }) => {
       })
       .catch((err) => console.log(err));
   }, []);
-
 
   const fantasy = brands[0];
   const comedy = brands[1];
@@ -57,40 +51,39 @@ const AuthProvider = ({ children }) => {
 
   //|| AUTHENTICATION
   const createUser = (email, password) => {
-    setAuthLoading(true)
+    setAuthLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   //|| SIGN IN
   const login = (email, password) => {
-    setAuthLoading(true)
+    setAuthLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   //|| SIGN IN WITH GOOGLE
   const googleSignIn = () => {
-    setAuthLoading(true)
-    return signInWithPopup(auth,googleProvider)
+    setAuthLoading(true);
+    return signInWithPopup(auth, googleProvider);
   };
 
   //|| SIGN OUT
   const LogOut = () => {
-    setAuthLoading(true)
-    return signOut(auth)
+    setAuthLoading(true);
+    return signOut(auth);
   };
 
-
   // || OBSERVER
-  useEffect(()=>{
-    const unsubcribe = onAuthStateChanged(auth, currentUser =>{
-      if(currentUser){
-        setUser(currentUser)
+  useEffect(() => {
+    const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
+      if (currentUser) {
+        setUser(currentUser);
       }
-    })
-    setAuthLoading(false)
+    });
+    setAuthLoading(false);
 
-    return ()=> unsubcribe()
-  },[])
+    return () => unsubcribe();
+  }, []);
 
   const allInOne = {
     categories,
@@ -99,7 +92,8 @@ const AuthProvider = ({ children }) => {
     createUser,
     login,
     googleSignIn,
-    LogOut
+    LogOut,
+    user
   };
   return (
     <div>
@@ -107,7 +101,6 @@ const AuthProvider = ({ children }) => {
     </div>
   );
 };
-
 
 AuthProvider.propTypes = {
   children: PropTypes.node,

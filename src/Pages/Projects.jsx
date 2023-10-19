@@ -3,11 +3,12 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import ReactStarsRating from "react-awesome-stars-rating";
 
 const Projects = () => {
-  const navigate = useNavigate()
   const brandData = useLoaderData();
+  const navigate = useNavigate()
   const brand = brandData.brand;
   // const {advertisementImages} = brand.fantasy[0]
   const products = brand.projects[0].products;
+  // console.log(brand)
   // console.log(advertisementImages)
   const advertisementImages = [
     "https://th.bing.com/th/id/OIP.vY4Tb1g5nojyL8GyX-mplAHaEK?pid=ImgDet&rs=1",
@@ -16,14 +17,17 @@ const Projects = () => {
     "https://th.bing.com/th/id/OIP.HZB9lVSOWtWPrlm-dcBBKAHaE7?pid=ImgDet&rs=1",
   ];
 
-
+  
+  console.log(brandData)
 
   // handle project
   const handleDetails = (e,name) =>{
     e.preventDefault()
-
     navigate(`/project/${name}`)
-    
+  }
+
+  const handleUpdate = () =>{
+    navigate('/update')
   }
 
   return (
@@ -49,14 +53,14 @@ const Projects = () => {
 
               <p>Type: {product.Type}</p>
               <p>Price:{product.Price}</p>
-              <div className="flex">
+              <div className="flex items-center gap-3">
                 <p>{product.Rating}</p>
                 <ReactStarsRating
                   className="flex"
                   value={product.Rating}></ReactStarsRating>
               </div>
               <div className="flex gap-3 pt-2">
-                <button className=" p-2 text-[15px] w-full border-none outline-none active:scale-95 transition-all bg-indigo-500 hover:bg-indigo-700 text-white">Update</button>
+                <button onClick={handleUpdate} className=" p-2 text-[15px] w-full border-none outline-none active:scale-95 transition-all bg-indigo-500 hover:bg-indigo-700 text-white">Update</button>
                 <button onClick={(event)=>handleDetails(event,product.Name)} className=" p-2 w-full active:scale-95 transition-all bg-indigo-500 hover:bg-indigo-700 text-[15px] border-none outline-none text-white">Details</button>
               </div>
             </div>

@@ -20,7 +20,7 @@ const Series = () => {
     return x;
   };
   //handling projects
-  const handleProject = (_id) => {
+    const handleProject = (_id)=> {
     navigate(`/brand/${_id}`);
   };
   return (

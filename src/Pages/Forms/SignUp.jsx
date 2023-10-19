@@ -1,9 +1,11 @@
 import { useState } from "react";
 import useAuth from "../../Utils/AuthHelper";
+import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
 
 function SignUp() {
   const [formData, setFormData] = useState({ email: "", password: "" });
-  const { createUser } = useAuth();
+  const { createUser, googleSignIn } = useAuth();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -12,11 +14,26 @@ function SignUp() {
 
   const handleSignUp = (e) => {
     e.preventDefault();
+
+    if (formData.password.length < 6) {
+      toast.error("Password must be at least 6 characters long.");
+      return;
+    }
+
+    if (!/^(?=.*[A-Z]).*$/.test(formData.password)) {
+      toast.error("Password must contain at least one capital letter.");
+      return;
+    }
+    if (!/^[a-zA-Z0-9]*$/.test(formData.password)) {
+      toast.error("Password must contain at least one special character.");
+      return;
+    }
+
     createUser(formData.email, formData.password)
-      .then((result) => {
-        console.log(result.user);
+      .then(() => {
+        toast.success("Successfully created an account");
       })
-      .catch((err) => console.error(err));
+      .catch((err) => toast.error(err.toString()));
   };
 
   return (
@@ -61,6 +78,13 @@ function SignUp() {
                   </svg>
                   <span className="ml-3">Sign Up</span>
                 </button>
+                <div className="text-center mt-2 underline">
+                  <Link to="/login" className="text-xs text-gray-500 uppercase">
+                    {" "}
+                    {/* Replace href with to */}
+                    or sign in
+                  </Link>
+                </div>
                 <p className="mt-6 text-xs text-gray-600 text-center">
                   I agree to abide by templatana's
                   <a
