@@ -2,6 +2,10 @@ h1 {
   line-height: 1.1 !important;
 }
 
+.line-height{
+  line-height: 1.1;
+}
+
 p {
   line-height: 1.6 !important;
 }
@@ -28,7 +32,8 @@ p {
       height: 0;
       position: absolute;
       bottom: 0;
-      background-color: rgba(255, 255, 255, 0.654);
+      background-color: #6365f1b6;
+      color: #fff;
       transition: height .3s linear;
 }
 
@@ -71,13 +76,4 @@ p {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-}
-
-
-/* styles.css */
-.dynamic-background {
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center;
-  /* Add any other styles you need */
 }
