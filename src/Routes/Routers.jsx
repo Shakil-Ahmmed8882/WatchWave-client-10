@@ -12,6 +12,7 @@ import Private from "../🔒Private/Private";
 import Login from "../Pages/Forms/Login";
 import Page404 from "../Pages/404";
 import SignUp from "../Pages/Forms/SignUp";
+import Details from "../Pages/Details/Details";
 const router = createBrowserRouter([
       {
             path:'/',
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
                         loader:({params})=> fetch(`http://localhost:1000/brand/${params.id}`),
                         element:<Projects></Projects>
                   },
+                  {
+                        path:'/project/:name',
+                        element:<Details></Details>
+                  }
+                  ,
                   {
                         path:'/login',
                         element:<Login></Login>

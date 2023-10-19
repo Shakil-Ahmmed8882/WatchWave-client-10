@@ -101,7 +101,6 @@ const AuthProvider = ({ children }) => {
     googleSignIn,
     LogOut
   };
-  console.log(user)
   return (
     <div>
       <AuthContext.Provider value={allInOne}>{children}</AuthContext.Provider>
