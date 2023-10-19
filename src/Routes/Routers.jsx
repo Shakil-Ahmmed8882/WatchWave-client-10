@@ -13,7 +13,6 @@ import SignUp from "../Pages/Forms/SignUp";
 import Details from "../Pages/Details/Details";
 import Update from "../Pages/Update";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -59,7 +58,7 @@ const router = createBrowserRouter([
         element: <Details></Details>,
       },
       {
-        path: "/update",
+        path: "/update/:name",
         element: <Update></Update>,
       },
       {

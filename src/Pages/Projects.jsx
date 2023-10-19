@@ -17,17 +17,17 @@ const Projects = () => {
     "https://th.bing.com/th/id/OIP.HZB9lVSOWtWPrlm-dcBBKAHaE7?pid=ImgDet&rs=1",
   ];
 
-  
-  console.log(brandData)
 
   // handle project
+  console.log()
   const handleDetails = (e,name) =>{
     e.preventDefault()
     navigate(`/project/${name}`)
   }
 
-  const handleUpdate = () =>{
-    navigate('/update')
+
+  const handleUpdate = (name) =>{
+    navigate(`/update/${name}`)
   }
 
   return (
@@ -60,7 +60,7 @@ const Projects = () => {
                   value={product.Rating}></ReactStarsRating>
               </div>
               <div className="flex gap-3 pt-2">
-                <button onClick={handleUpdate} className=" p-2 text-[15px] w-full border-none outline-none active:scale-95 transition-all bg-indigo-500 hover:bg-indigo-700 text-white">Update</button>
+                <button onClick={()=>handleUpdate(product.Name)} className=" p-2 text-[15px] w-full border-none outline-none active:scale-95 transition-all bg-indigo-500 hover:bg-indigo-700 text-white">Update</button>
                 <button onClick={(event)=>handleDetails(event,product.Name)} className=" p-2 w-full active:scale-95 transition-all bg-indigo-500 hover:bg-indigo-700 text-[15px] border-none outline-none text-white">Details</button>
               </div>
             </div>
