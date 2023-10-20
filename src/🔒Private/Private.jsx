@@ -9,14 +9,13 @@ const Private = ({ children }) => {
   if (authLoading) {
     return <div className="w-full h-screen flex justify-center items-center"><span className="loading loading-lg"></span></div>
   }
-  if(!user){
-    return <Navigate state={location.pathname} to="/login"></Navigate>;
-    
-  }
-  
   if (user) {
     return children;
   }
+
+    return <Navigate state={location.pathname} to="/login"></Navigate>;
+
+
 };
 
 Private.propTypes = {
