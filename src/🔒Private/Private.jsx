@@ -3,17 +3,20 @@ import useAuth from "../Utils/AuthHelper";
 import PropTypes from 'prop-types'; // Correct the import for PropTypes
 
 const Private = ({ children }) => {
-  const { user, loading } = useAuth()
+  const { user, authLoading } = useAuth()
   const location = useLocation();
 
-  if (loading) {
-    return <span className="loading loading-spinner loading-lg"></span>;
+  if (authLoading) {
+    return <div className="w-full h-screen flex justify-center items-center"><span className="loading loading-lg"></span></div>
   }
+  if(!user){
+    return <Navigate state={location.pathname} to="/login"></Navigate>;
+    
+  }
+  
   if (user) {
     return children;
   }
-
-  return <Navigate state={location.pathname} to="/login"></Navigate>;
 };
 
 Private.propTypes = {

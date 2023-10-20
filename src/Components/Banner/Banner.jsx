@@ -13,10 +13,12 @@ const Banner = () => {
         </p>
         <div className="flex sm:justify-center md:justify-start flex-col md:flex-row gap-3 my-5 md:mt-6 md:my-5 sm:items-center">
           <button className="p-[6px] sm:p-3 w-[100%] sm:w-[80%] md:w-[50%] text-left  md:text-[14px]  sm:text-center md:bg-indigo-500 hover:bg-indigo-700 transition-all text-white md:my-0 rounded-full">
-            Browse our collection
+            Dive into the world of collection
           </button>
           <span className=" hidden sm:flex items-center arrow-container sm:justify-center">
-            <span className="ml-5 md:ml-0 md:text-[14px]">Spring 23 collection{" "}</span>
+            <span className="ml-5 md:ml-0 md:text-[14px]">
+              Spring 23k collection{" "}
+            </span>
             <img className="w-6 arrow" src={arrow} alt="" />
           </span>
         </div>

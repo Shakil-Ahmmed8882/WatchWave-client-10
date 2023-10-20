@@ -15,3 +15,22 @@ a.active {
       top: 30px;
       left: 15px;
     }
+
+
+  .bottom-mark{
+    position: relative;
+    transition: all .2s linear;
+  }
+
+    .bottom-mark::before {
+      content: '';
+      position: absolute;
+      width:15%;
+      margin-top: 25px;
+      height:4px;
+      background-color: #6366F1;
+      color: #6366F1;
+      margin-left: 30%;
+      top: 30px;
+  
+    }

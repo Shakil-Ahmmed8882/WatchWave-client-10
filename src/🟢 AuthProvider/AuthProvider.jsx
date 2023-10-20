@@ -22,7 +22,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:1000/")
+    fetch("https://watch-wave-4ubn2ugcr-shakil-ahmmeds-projects.vercel.app/")
       .then((res) => res.json())
       .then((data) => {
         if (data) {
@@ -32,6 +32,8 @@ const AuthProvider = ({ children }) => {
       })
       .catch((err) => console.log(err));
   }, []);
+
+  console.log(user);
 
   const fantasy = brands[0];
   const comedy = brands[1];
@@ -78,12 +80,14 @@ const AuthProvider = ({ children }) => {
     const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
+        setAuthLoading(false);
       }
     });
-    setAuthLoading(false);
+
+    console.log(authLoading);
 
     return () => unsubcribe();
-  }, []);
+  }, [authLoading]);
 
   const allInOne = {
     categories,
@@ -93,7 +97,8 @@ const AuthProvider = ({ children }) => {
     login,
     googleSignIn,
     LogOut,
-    user
+    user,
+    authLoading,
   };
   return (
     <div>

@@ -12,6 +12,7 @@ import Page404 from "../Pages/404";
 import SignUp from "../Pages/Forms/SignUp";
 import Details from "../Pages/Details/Details";
 import Update from "../Pages/Update";
+import PricingCard from "../Components/Subcription/Subcription";
 
 const router = createBrowserRouter([
   {
@@ -45,13 +46,26 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <MyCart></MyCart>,
-        loader: () => fetch("http://localhost:1000/movies"),
+        loader: () =>
+          fetch(
+            "https://watch-wave-4ubn2ugcr-shakil-ahmmeds-projects.vercel.app/movies"
+          ),
       },
       {
         path: "/brand/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:1000/brand/${params.id}`),
+          fetch(
+            `https://watch-wave-4ubn2ugcr-shakil-ahmmeds-projects.vercel.app/brand/${params.id}`
+          ),
         element: <Projects></Projects>,
+      },
+      {
+        path: "/subscription",
+        element: (
+          <Private>
+            <PricingCard></PricingCard>
+          </Private>
+        ),
       },
       {
         path: "/project/:name",

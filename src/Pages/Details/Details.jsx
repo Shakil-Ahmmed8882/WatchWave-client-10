@@ -1,8 +1,7 @@
 import { useParams } from "react-router-dom";
 import useAuth from "../../Utils/AuthHelper";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 import Swal from "sweetalert2";
-
 
 const Details = () => {
   const { name } = useParams();
@@ -32,46 +31,24 @@ const Details = () => {
     console.log("Found Object:", foundObject);
   }
 
-
-// Function to add to the cart
-const handleAddToCart = (e)=>{
-      e.preventDefault()
-      fetch('http://localhost:1000/movie',{
-            method:'POST',
-            headers:{
-                  'content-type':'application/json'
-            },
-            body:JSON.stringify(foundObject)
-      })
-      .then(res => res.json())
-      .then(data => {
-            if(data.insertedId){
-                  console.log('added data')
-                  Swal.fire(
-                        'Added!',
-                        'Thanks for staying in tuned',
-                        'success',
-                      )
-                  
-            }
-      })
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Function to add to the cart
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    fetch("https://watch-wave-cqulrt8rl-shakil-ahmmeds-projects.vercel.app", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(foundObject),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          console.log("added data");
+          Swal.fire("Added!", "Thanks for staying in tuned", "success");
+        }
+      });
+  };
 
   const { Name, Image, Price, Rating, Type } = foundObject;
 
@@ -83,7 +60,9 @@ const handleAddToCart = (e)=>{
             <div className="flex flex-col items-center md:items-start px-6 py-4">
               <div className="flex flex-col w-24">
                 <h2 className="font-bold text-xl dark:text-gray-100 w-80">
-                <h1 className="text-5xl font-bold line-height">{Name.split(' ')[0]}</h1>
+                  <h1 className="text-5xl font-bold line-height">
+                    {Name.split(" ")[0]}
+                  </h1>
                 </h2>
                 <div className="border- border-red-500 mb-3 text"></div>
               </div>
@@ -97,9 +76,13 @@ const handleAddToCart = (e)=>{
             </div>
 
             <div className="flex flex-col items-center md:items-start line-height bg-gray-100 px-6 py-3 rounded-lg dark:bg-blue-100">
-              <h2 className="font-bold text-2xl mb-2 text-black">${Price}/mo</h2>
+              <h2 className="font-bold text-2xl mb-2 text-black">
+                ${Price}/mo
+              </h2>
               <p className="text-sm-light-text">Access to the world of </p>
-              <button onClick={(e)=> handleAddToCart(e)} className="bg-blue-600 px-4 py-2 mt-3 rounded font-semibold text-white hover:bg-blue-700">
+              <button
+                onClick={(e) => handleAddToCart(e)}
+                className="bg-blue-600 px-4 py-2 mt-3 rounded font-semibold text-white hover:bg-blue-700">
                 Add to cart
               </button>
             </div>

@@ -12,13 +12,16 @@ const Update = () => {
       brandData[key] = value;
     });
 
-    fetch(`http://localhost:1000/update/${name}`, {
-      method: "PATCH",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(brandData),
-    })
+    fetch(
+      `https://watch-wave-4ubn2ugcr-shakil-ahmmeds-projects.vercel.app/update/${name}`,
+      {
+        method: "PATCH",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(brandData),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount === 1) {
@@ -26,7 +29,7 @@ const Update = () => {
         }
       })
       .catch((err) => {
-            swal(err.toString())
+        swal(err.toString());
       });
   };
 

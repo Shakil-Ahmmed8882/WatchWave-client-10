@@ -1,11 +1,13 @@
 import { useState } from "react";
 import useAuth from "../../Utils/AuthHelper";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 function SignUp() {
   const [formData, setFormData] = useState({ email: "", password: "" });
-  const { createUser, googleSignIn } = useAuth();
+  const { createUser } = useAuth();
+  const navigate = useNavigate()
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -14,7 +16,17 @@ function SignUp() {
 
   const handleSignUp = (e) => {
     e.preventDefault();
+    
+    
+    if (formData.email === '') {
+      toast.error("Plase input your email");
+      return;
+    }
 
+    if (formData.password === '') {
+      toast.error("Plase input your password");
+      return;
+    }
     if (formData.password.length < 6) {
       toast.error("Password must be at least 6 characters long.");
       return;
@@ -32,6 +44,7 @@ function SignUp() {
     createUser(formData.email, formData.password)
       .then(() => {
         toast.success("Successfully created an account");
+        navigate(location.state ? location.state : "/");
       })
       .catch((err) => toast.error(err.toString()));
   };
@@ -56,6 +69,7 @@ function SignUp() {
                     key={field}
                     type={field === "password" ? "password" : "email"}
                     name={field}
+                    required
                     value={formData[field]}
                     onChange={handleInputChange}
                     placeholder={field.replace(/^\w/, (c) => c.toUpperCase())}

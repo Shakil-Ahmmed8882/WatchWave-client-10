@@ -53,7 +53,7 @@ p {
 /* add-product-cover */
 .add-product-cover{
   mix-blend-mode: multiply;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.901), rgba(0, 0, 0, 0.725)), url('https://media.istockphoto.com/id/137861322/photo/tv-media-panel.jpg?s=1024x1024&w=is&k=20&c=xCWE0-BqF1AzTlLvMKIVykbi-JYVNfkSf602C9CKd5o=');
+  background: linear-gradient(to right,#3f31d5, #4438ca), url('https://media.istockphoto.com/id/137861322/photo/tv-media-panel.jpg?s=1024x1024&w=is&k=20&c=xCWE0-BqF1AzTlLvMKIVykbi-JYVNfkSf602C9CKd5o=');
 
   background-size: cover;
   width: 100%;

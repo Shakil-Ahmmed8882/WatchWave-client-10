@@ -1,10 +1,20 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAuth from "../Utils/AuthHelper";
 
 const MyCart = () => {
+  const { loading } = useAuth();
   const loadedMovies = useLoaderData();
   const [movies, setMovies] = useState(loadedMovies);
+
+  if (loading) {
+    return (
+      <div className="text-5xl font-bold flex w-full h-screen justify-center items-center">
+        <p>Loading..</p>
+      </div>
+    );
+  }
 
   //   Random Director
   const directorNames = [
@@ -44,9 +54,12 @@ const MyCart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire("Deleted!", "Your file has been deleted.", "success");
-        fetch(`http://localhost:1000/movies/${_id}`, {
-          method: "DELETE",
-        })
+        fetch(
+          `https://watch-wave-cqulrt8rl-shakil-ahmmeds-projects.vercel.apps/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
@@ -67,7 +80,7 @@ const MyCart = () => {
         <h1 className="text-2xl font-semibold mb-4">
           Shopping Cart{movies.length}
         </h1>
-        { movies.length &&
+        {movies.length && (
           <div className="flex flex-col md:flex-row gap-4">
             <div className="md:w-3/4">
               <div className="bg-white rounded-lg shadow-md  mb-4">
@@ -149,7 +162,7 @@ const MyCart = () => {
               </div>
             </div>
           </div>
-        }
+        )}
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+
 const Footer = () => {
   return (
     <section className="flex flex-col h-screen lg:justify-end font-poppins">
@@ -8,11 +9,10 @@ const Footer = () => {
               <a
                 href="#"
                 className="inline-block mb-4 text-xl font-bold text-gray-200 dark:text-gray-400">
-                About Company
+                About WatchWave
               </a>
               <p className="text-base font-normal leading-6 text-gray-300 lg:w-64 dark:text-gray-400">
-                Lorem ipsum dor amet Lorem ipsum dor amet Lorem ipsum dor amet
-                Lorem ipsum dor amet
+                Welcome to WatchWave, where people come to watch their favorite movies and dramas. We provide a wide selection of top-quality entertainment to keep you entertained. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst.
               </p>
               <div className="flex items-center mt-4">
                 <a href="#">
@@ -44,12 +44,7 @@ const Footer = () => {
               </h2>
               <ul>
                 <li
-                  className="flex items-cgihefdeh
-               n 
-               ybj
-               idhbduiabuydbd
-   
-               den mb-4 ">
+                  className="flex items-center mb-4 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -178,12 +173,12 @@ const Footer = () => {
               </h2>
               <div className="flex flex-wrap items-center gap-3">
                 <img
-                  src="https://i.postimg.cc/904JVBhh/pexels-andrea-piacquadio-840996.jpg"
+                  src="https://th.bing.com/th/id/OIP.ZneFCUzw81CdNcHjw9czdQHaKt?pid=ImgDet&rs=1"
                   alt=""
                   className="object-cover w-20 h-20"
                 />
                 <img
-                  src="https://i.postimg.cc/pdZ0BTZg/pexels-cowomen-2041627.jpg"
+                  src="https://th.bing.com/th/id/OIP.ZneFCUzw81CdNcHjw9czdQHaKt?pid=ImgDet&rs=1"
                   alt=""
                   className="object-cover w-20 h-20"
                 />
@@ -212,11 +207,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-4 text-center text-gray-300 bg-green-900 dark:bg-gray-800 dark:text-gray-400">
-        <span>© Copyright 2022 . All Rights Reserved</span>
+      <div className="py-4 text-center text-gray-300 bg-black dark:bg-gray-800 dark:text-gray-400">
+        <span>© Copyright 2023 . All Rights Reserved</span>
       </div>
     </section>
-  );
-};
+  
+  )
+}
 
-export default Footer;
+export default Footer

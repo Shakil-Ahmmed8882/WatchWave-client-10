@@ -4,12 +4,18 @@ import "./navbar.css";
 import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
-  const { user, LogOut } = useAuth();
+  const { user, LogOut,authLoading } = useAuth();
   const [isLogout, setIsLogOut] = useState(!user);
-  const location = useLocation()
-  const textColor = location.pathname == '/addProduct'?'text-indigo-700':'';
 
-  
+  const location = useLocation();
+  const path = location.pathname;
+
+
+  console.log(path)
+  const textColor = path == "/addProducts" ? "text-white" : "";
+  console.log(textColor)
+
+
   useEffect(() => {
     if (!user) {
       setIsLogOut(true);
@@ -26,6 +32,16 @@ const Navbar = () => {
       .catch((err) => console.error(err));
   };
 
+
+
+  const privateNavLinks = (
+    <>
+      <li>
+        <NavLink to="/subscription">Pro plan</NavLink>
+      </li>
+    </>
+  );
+
   const navLinks = (
     <>
       <li>
@@ -40,11 +56,17 @@ const Navbar = () => {
       <li>
         <NavLink to="/cart">My-cart</NavLink>
       </li>
+      {
+        user && !isLogout?privateNavLinks:''
+      }
     </>
   );
+  
+
+  
   return (
     <div>
-      <div className="navbar bg-transparent " style={{color:textColor}}>
+      <div className={`navbar bg-transparent ${textColor}`} >
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -73,17 +95,15 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
-        <div className="navbar-end">
+        {
+ <div className="navbar-end">
           {user && !isLogout ? (
             <>
               <div className="dropdown dropdown-bottom dropdown-end">
                 <label tabIndex={0} className="m-1">
                   <div className="avatar">
                     <div className="w-6 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                      <img
-                        src={user.photoURL}
-                        alt="User Avatar"
-                      />
+                      <img src={user.photoURL} alt="User Avatar" />
                     </div>
                   </div>
                 </label>
@@ -102,11 +122,16 @@ const Navbar = () => {
               </div>
             </>
           ) : (
-            <Link to="/login" className="hidden bg-indigo-500 hover:bg-indigo-700 text-white md:flex py-[8px] rounded px-5">
+
+            <Link
+              to="/login"
+              className="hidden bg-indigo-500 hover:bg-indigo-700 text-white md:flex py-[8px] rounded px-5">
               Login
             </Link>
           )}
         </div>
+        }
+   
       </div>
     </div>
   );
