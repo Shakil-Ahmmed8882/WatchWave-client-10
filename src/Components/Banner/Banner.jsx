@@ -2,9 +2,9 @@ import arrow from "./arrow.svg";
 import "./Banner.css";
 const Banner = () => {
   return (
-    <div className="flex gap-3 flex-col-reverse md:flex-row text-white md:text-black  sm:text-center md:text-left banner-bg px-3 md:mt-5">
+      <div className="flex BG-cover gap-3 flex-col-reverse md:flex-row text-white md:text-black  sm:text-center md:text-left banner-bg px-3 md:mt-5">
       <div className="flex-1 space-y-4">
-        <h1 className="underline-style text-[20px] sm:text-3xl md:text-4xl mb-2">
+        <h1 className="underline-style text-[20px] sm:text-3xl md:text-4xl font-bold mb-2">
           WATCH TV SHOWS OR MOVIES ANYWHERE. ANYTIME
         </h1>
         <p className="text-sm-light-text md:text-light-text">
@@ -143,8 +143,7 @@ const Banner = () => {
             </svg>
           </span>
           <div className="text-sm-light-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam,
-            quibusdam. Autem expedita porro debitis ipsum!
+          Amazing wizarding collection of movies got released in this year 2023. We always emphasise on viewers&apps; convinience
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useAuth from "../../Utils/AuthHelper";
 import "./navbar.css";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import '../Banner/banner.css'
 
 const Navbar = () => {
   const { user, LogOut,authLoading } = useAuth();
@@ -11,9 +12,7 @@ const Navbar = () => {
   const path = location.pathname;
 
 
-  console.log(path)
-  const textColor = path == "/addProducts" ? "text-white" : "";
-  console.log(textColor)
+  
 
 
   useEffect(() => {
@@ -65,8 +64,8 @@ const Navbar = () => {
 
   
   return (
-    <div>
-      <div className={`navbar bg-transparent ${textColor}`} >
+    <div className="BG-cover">
+      <div className={`navbar bg-transparent`} >
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -90,7 +89,10 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">WatchWave</a>
+          <div className="flex items-center">
+          <img className="w-11 md:w-16 mb-2 ml-3" src="https://th.bing.com/th/id/OIP.Tu-vaj5Vl1kIMetrFsuoKgHaHa?pid=ImgDet&w=500&h=500&rs=1" alt="" />
+          <a className=" normal-case md:text-xl font-bold -ml-1">atchWave</a>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>

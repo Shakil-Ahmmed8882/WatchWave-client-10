@@ -43,10 +43,17 @@ const AddProducts = () => {
   };
 
   return (
-    <div className="add-product-cover absolute top-0 -z-10 flex items-center">
+    <div>
+          <div className="lg:text-center">
+          <p className="mt-2 text-3xl leading-8 font-extrabold  text-gray-900 sm:text-4xl bottom-mark md:w-[500px] md:mx-auto">
+            WatchWave Cinema
+          </p>
+        </div>
+    <div className="add-product-cover  top-0 -z-10 flex items-center">
+      
       <form
         onSubmit={handleBrand}
-        className="p-8 my-auto mt-16 w-full lg:w-1/2 bg-[#000000cb] text-white mx-auto">
+        className="p-8 my-auto border mt-16 w-full lg:w-1/2  mx-auto">
         {/* ================================================== */}
         <div className="flex flex-wrap gap-3 mb-9 md:space-x-5">
           <label className="space-x-2">
@@ -205,6 +212,8 @@ const AddProducts = () => {
           </button>
         </div>
       </form>
+    </div>
+  
     </div>
   );
 };

@@ -2,6 +2,7 @@ import Banner from "../Components/Banner/Banner";
 import Footer from "../Components/Footer/Footer";
 import LocationInfo from "../Components/Our-Location/Location";
 import PricingCard from "../Components/Subcription/Subcription";
+import ImageGrid from "./Actors";
 import Series from "./Series";
 
 // import useAuth from "../Utils/AuthHelper";
@@ -14,6 +15,9 @@ const Home = () => {
       <Banner></Banner>
       </div>
         <Series></Series>
+        <div>
+          <ImageGrid></ImageGrid>
+        </div>
         <div>
           <LocationInfo></LocationInfo>
         </div>

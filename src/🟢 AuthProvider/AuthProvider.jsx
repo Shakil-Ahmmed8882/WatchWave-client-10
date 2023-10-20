@@ -19,44 +19,43 @@ const AuthProvider = ({ children }) => {
   const [brands, setBrands] = useState([]);
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
-  
+
   useEffect(() => {
-    fetch("https://watch-wave-4ubn2ugcr-shakil-ahmmeds-projects.vercel.app/")
-    .then((res) => res.json())
-    .then((data) => {
-      if (data) {
-        setBrands(data);
-        setLoading(false);
+    fetch("https://watch-wave-g0c1k5rt2-shakil-ahmmeds-projects.vercel.app/")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) {
+          setBrands(data);
+          setLoading(false);
         }
       })
       .catch((err) => console.log(err));
-    }, []);
-    
-    
-    const fantasy = brands[0];
-    const comedy = brands[1];
-    const scienceFiction = brands[2];
-    const horror = brands[3];
-    const supperHero = brands[4];
-    const drama = brands[5];
-    
-    const categories = {
-      fantasy,
-      comedy,
-      scienceFiction,
-      horror,
-      supperHero,
-      drama,
-    };
-    
-    const [authLoading, setAuthLoading] = useState(true);
-    //|| AUTHENTICATION
-    const createUser = (email, password) => {
-      setAuthLoading(true);
-      return createUserWithEmailAndPassword(auth, email, password);
-    };
-    
-    //|| SIGN IN
+  }, []);
+
+  const fantasy = brands[0];
+  const comedy = brands[1];
+  const scienceFiction = brands[2];
+  const horror = brands[3];
+  const supperHero = brands[4];
+  const drama = brands[5];
+
+  const categories = {
+    fantasy,
+    comedy,
+    scienceFiction,
+    horror,
+    supperHero,
+    drama,
+  };
+
+  const [authLoading, setAuthLoading] = useState(true);
+  //|| AUTHENTICATION
+  const createUser = (email, password) => {
+    setAuthLoading(true);
+    return createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  //|| SIGN IN
   const login = (email, password) => {
     setAuthLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
@@ -79,16 +78,16 @@ const AuthProvider = ({ children }) => {
     const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-        console.log(user)
+        console.log(user);
       }
       setAuthLoading(false);
     });
 
     console.log(authLoading);
-    
+
     return () => unsubcribe();
-  },[]);
-  
+  }, []);
+
   const allInOne = {
     categories,
     brands,
@@ -100,7 +99,7 @@ const AuthProvider = ({ children }) => {
     user,
     authLoading,
   };
-  console.log(authLoading)
+  console.log(authLoading);
   return (
     <div>
       <AuthContext.Provider value={allInOne}>{children}</AuthContext.Provider>

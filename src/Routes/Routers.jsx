@@ -48,14 +48,14 @@ const router = createBrowserRouter([
         element: <MyCart></MyCart>,
         loader: () =>
           fetch(
-            "https://watch-wave-4ubn2ugcr-shakil-ahmmeds-projects.vercel.app/movies"
+            "https://watch-wave-g0c1k5rt2-shakil-ahmmeds-projects.vercel.app/movies"
           ),
       },
       {
         path: "/brand/:id",
         loader: ({ params }) =>
           fetch(
-            `https://watch-wave-4ubn2ugcr-shakil-ahmmeds-projects.vercel.app/brand/${params.id}`
+            `https://watch-wave-g0c1k5rt2-shakil-ahmmeds-projects.vercel.app/brand/${params.id}`
           ),
         element: <Projects></Projects>,
       },

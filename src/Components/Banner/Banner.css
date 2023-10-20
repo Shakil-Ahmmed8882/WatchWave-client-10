@@ -1,6 +1,6 @@
 
 h1{
-  line-height: 1.5 !important;
+  line-height: 1.2 !important;
 }
 
 .bg-1 {
@@ -82,4 +82,12 @@ h1{
     padding-block:50px;
   }
   
+}
+
+
+.BG-cover{
+  background:linear-gradient(to bottom, rgba(255, 255, 255, 0.942), rgb(255, 255, 255)), url('https://wemod-app.com/images/uploads/blog/2022-10-10/wemod-blog-4-2-gtv68-rs-wX-1000-hX-562.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }

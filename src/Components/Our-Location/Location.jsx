@@ -2,7 +2,7 @@ import React from "react";
 
 const LocationInfo = () => {
   return (
-    <div className="bg-gray-100 py-12">
+    <div className="bg-gray-100 py-12 BG-cover">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl bottom-mark md:w-[500px] md:mx-auto">
@@ -16,7 +16,7 @@ const LocationInfo = () => {
         </div>
 
         <div className="mt-10">
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
             <div className="flex">
               <div className="flex-shrink-0">
                 <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
@@ -37,7 +37,7 @@ const LocationInfo = () => {
               </div>
               <div className="ml-4">
                 <dt className="text-lg leading-6 font-medium text-gray-900">
-                  Address
+                  FIND US
                 </dt>
                 <dd className="mt-2 text-base text-gray-500">
                   123 Main St, Suite 100
@@ -67,7 +67,7 @@ const LocationInfo = () => {
               </div>
               <div className="ml-4">
                 <dt className="text-lg leading-6 font-medium text-gray-900">
-                  Phone number
+                  CONTACT US IF ANY ISSUE
                 </dt>
                 <dd className="mt-2 text-base text-gray-500">(555) 555-5555</dd>
               </div>
@@ -135,8 +135,71 @@ const LocationInfo = () => {
                 </dd>
               </div>
             </div>
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div className="ml-4">
+                <dt className="text-lg leading-6 font-medium text-gray-900">
+                  CHINEMA HALL
+                </dt>
+                <dd className="mt-2 text-base text-gray-500">
+                  Monday - Friday: 9am to 8pm
+                  <br />
+                  Saturday: 10am to 6pm
+                  <br />
+                  Sunday: 12pm to 4pm
+                </dd>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-6 h-6">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div className="ml-4">
+                <dt className="text-lg leading-6 font-medium text-gray-900">
+                  ACTORS
+                </dt>
+                <dd className="mt-2 text-base text-gray-500">
+                  Monday - Friday: 9am to 8pm
+                  <br />
+                  Saturday: 10am to 6pm
+                  <br />
+                  Sunday: 12pm to 4pm
+                </dd>
+              </div>
+            </div>
           </dl>
         </div>
+        <div></div>
       </div>
     </div>
   );

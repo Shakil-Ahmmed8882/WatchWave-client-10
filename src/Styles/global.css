@@ -17,9 +17,9 @@ p {
     width: 100%;
     height: 100%;
     background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.829),
-        rgba(0, 0, 0, 0.261)
+        to bottom,
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0.826)
       ),
       url("https://th.bing.com/th/id/R.ba8cdef385f2d4fb48d9da97b2a7eb78?rik=K7bOqw4oM95ZpQ&pid=ImgRaw&r=0");
     background-attachment: fixed;
@@ -41,6 +41,17 @@ p {
       height: 100%;
 }
 
+.imgGrid > div{
+  height: 400px;
+}
+.imgGrid > div img{
+  background-position: top;
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .brand:hover .brandName {
       display: flex;
       justify-content: center;
@@ -53,7 +64,7 @@ p {
 /* add-product-cover */
 .add-product-cover{
   mix-blend-mode: multiply;
-  background: linear-gradient(to right,#3f31d5, #4438ca), url('https://media.istockphoto.com/id/137861322/photo/tv-media-panel.jpg?s=1024x1024&w=is&k=20&c=xCWE0-BqF1AzTlLvMKIVykbi-JYVNfkSf602C9CKd5o=');
+  background: linear-gradient(to bottom,#ffffff, #fdfdfdf3), url('https://media.istockphoto.com/id/137861322/photo/tv-media-panel.jpg?s=1024x1024&w=is&k=20&c=xCWE0-BqF1AzTlLvMKIVykbi-JYVNfkSf602C9CKd5o=');
 
   background-size: cover;
   width: 100%;
@@ -61,10 +72,11 @@ p {
   margin: 0;
   background-repeat: no-repeat;
   background-position: top;
+  background-attachment: fixed;
 }
 
 .bottom-line{
-  border-bottom: 1px solid rgba(255, 255, 255, 0.176);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.176);
 }
 
 /* Project cover */
