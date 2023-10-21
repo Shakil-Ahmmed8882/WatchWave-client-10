@@ -34,7 +34,7 @@ const Details = () => {
   // Function to add to the cart
   const handleAddToCart = (e) => {
     e.preventDefault();
-    fetch("https://watch-wave-cqulrt8rl-shakil-ahmmeds-projects.vercel.app", {
+    fetch("https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app//", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -59,11 +59,11 @@ const Details = () => {
           <div className="border w-full max-w-sm md:w-1/2 lg:w-1/3 mx-3 rounded-lg shadow-lg mt-5 dark:shadow-blue-900">
             <div className="flex flex-col items-center md:items-start px-6 py-4">
               <div className="flex flex-col w-24">
-                <h2 className="font-bold text-xl dark:text-gray-100 w-80">
+                <h1 className="font-bold text-xl dark:text-gray-100 w-80">
                   <h1 className="text-5xl font-bold line-height">
                     {Name.split(" ")[0]}
                   </h1>
-                </h2>
+                </h1>
                 <div className="border- border-red-500 mb-3 text"></div>
               </div>
               <div>
@@ -76,9 +76,9 @@ const Details = () => {
             </div>
 
             <div className="flex flex-col items-center md:items-start line-height bg-gray-100 px-6 py-3 rounded-lg dark:bg-blue-100">
-              <h2 className="font-bold text-2xl mb-2 text-black">
+              <h1 className="font-bold text-2xl mb-2 text-black">
                 ${Price}/mo
-              </h2>
+              </h1>
               <p className="text-sm-light-text">Access to the world of </p>
               <button
                 onClick={(e) => handleAddToCart(e)}

@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../Utils/AuthHelper";
 import "./navbar.css";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import '../Banner/banner.css'
+import Toggle from "../Toggler/Toggle";
 
 const Navbar = () => {
-  const { user, LogOut,authLoading } = useAuth();
+  const { user, LogOut} = useAuth();
   const [isLogout, setIsLogOut] = useState(!user);
-
-  const location = useLocation();
-  const path = location.pathname;
 
 
   
@@ -35,25 +33,28 @@ const Navbar = () => {
 
   const privateNavLinks = (
     <>
-      <li>
+      <li className="text-gray-500">
         <NavLink to="/subscription">Pro plan</NavLink>
+      </li>
+      <li className="text-gray-500">
+        <NavLink to="/cart">My-cart</NavLink>
       </li>
     </>
   );
 
   const navLinks = (
     <>
-      <li>
+      <li className="text-gray-500">
         <NavLink to="/">home</NavLink>
       </li>
-      <li>
+      <li className="text-gray-500">
         <NavLink to="/series">Series</NavLink>
       </li>
-      <li>
+      <li className="text-gray-500">
         <NavLink to="/addProducts">Add Products</NavLink>
       </li>
+      <Toggle></Toggle>
       <li>
-        <NavLink to="/cart">My-cart</NavLink>
       </li>
       {
         user && !isLogout?privateNavLinks:''
@@ -64,7 +65,7 @@ const Navbar = () => {
 
   
   return (
-    <div className="BG-cover">
+    <div className="" id="navbar">
       <div className={`navbar bg-transparent`} >
         <div className="navbar-start">
           <div className="dropdown">
@@ -90,7 +91,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex items-center">
-          <img className="w-11 md:w-16 mb-2 ml-3" src="https://th.bing.com/th/id/OIP.Tu-vaj5Vl1kIMetrFsuoKgHaHa?pid=ImgDet&w=500&h=500&rs=1" alt="" />
+          <img className="w-11 md:w-16 mb-2 ml-3" src="https://i.ibb.co/CBMMS4x/watch-Eave-Logo-removebg-preview.png" alt="" />
           <a className=" normal-case md:text-xl font-bold -ml-1">atchWave</a>
           </div>
         </div>

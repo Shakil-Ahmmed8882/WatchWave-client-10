@@ -1,6 +1,6 @@
 a.active {
       background-color: transparent !important;
-      color: #000 !important;
+      color: #909090 !important;
       position: relative;
       transition: all .2s linear;
     }

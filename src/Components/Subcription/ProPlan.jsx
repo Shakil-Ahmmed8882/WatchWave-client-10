@@ -1,13 +1,13 @@
-import React from "react";
+import  './subscription.css'
 
 const ProPlanCard = () => {
   return (
-    <div className="w-full p-6 rounded-lg shadow-xl sm:w-1/2 bg-gradient-to-br from-blue-600 to-purple-600 sm:p-8">
+    <div className="w-full Color p-6 rounded-lg shadow-xl sm:w-1/2 bg-gradient-to-br from-blue-600 to-purple-600 sm:p-8">
       <div className="flex flex-col items-start justify-between gap-4 mb-6 lg:flex-row">
         <div>
-          <h3 className="text-2xl font-semibold text-white jakarta sm:text-4xl">
+          <h1 className="text-2xl font-semibold text-white jakarta sm:text-4xl">
             Pro Plan
-          </h3>
+          </h1>
         </div>
         <span className="order-first inline-block px-3 py-1 text-xs font-semibold tracking-wider text-white uppercase bg-black rounded-full lg:order-none bg-opacity-20">
           Go Pro

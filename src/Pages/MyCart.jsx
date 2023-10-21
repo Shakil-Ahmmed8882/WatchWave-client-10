@@ -2,11 +2,12 @@ import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../Utils/AuthHelper";
+import toast from "react-hot-toast";
 
 const MyCart = () => {
   const { loading } = useAuth();
   const loadedMovies = useLoaderData();
-  const [movies, setMovies] = useState(loadedMovies);
+  const [movies, setMovies] = useState(loadedMovies || {});
 
   if (loading) {
     return (
@@ -42,6 +43,7 @@ const MyCart = () => {
 
   const handleRemove = (e, _id) => {
     e.preventDefault();
+    console.log(_id)
 
     Swal.fire({
       title: "Are you sure?",
@@ -53,23 +55,23 @@ const MyCart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire("Deleted!", "Your file has been deleted.", "success");
         fetch(
-          `https://watch-wave-cqulrt8rl-shakil-ahmmeds-projects.vercel.apps/${_id}`,
+          `https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app/movies/${_id}`,
           {
             method: "DELETE",
           }
-        )
+          )
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
               const remainingMovies = loadedMovies.filter(
                 (movie) => movie._id !== _id
-              );
-              setMovies(remainingMovies);
+                );
+                setMovies(remainingMovies);
+                Swal.fire("Deleted!", "Your file has been deleted.", "success");
             }
           })
-          .catch((err) => console.error(err));
+          .catch((err) => toast.error(err.toString()));
       }
     });
   };
@@ -138,7 +140,7 @@ const MyCart = () => {
             </div>
             <div className="md:w-1/4 sticky top-0">
               <div className="bg-white rounded-lg sticky top-0 shadow-md p-6">
-                <h2 className="text-lg font-semibold mb-4">Summary</h2>
+                <h1 className="text-lg font-semibold mb-4">Summary</h1>
                 <div className="flex justify-between mb-2">
                   <span>Subtotal</span>
                   <span>$19.99</span>

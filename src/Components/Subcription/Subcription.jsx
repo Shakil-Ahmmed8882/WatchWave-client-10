@@ -4,8 +4,8 @@ import ProPlanCard from "./ProPlan";
 
 const PricingCard = () => {
   return (
-    <div className="flex flex-col md:flex-row mt-8 max-w-6xl mx-auto">
-      <div className="order-3 md:order-none">
+    <div className="flex flex-col md:flex-row mt-8 max-w-6xl gap-3  mx-auto">
+      <div className="order-3 md:order-none free-plan">
       <MovieSubscriptionCard></MovieSubscriptionCard>
       </div>
       <ProPlanCard></ProPlanCard>

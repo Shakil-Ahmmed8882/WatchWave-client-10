@@ -1,0 +1,8 @@
+.Color span{
+            color: #fff !important;
+}
+
+.Color ~ div,.free-plan{
+      background-color: rgb(255, 255, 255);
+      height: 530px;
+}

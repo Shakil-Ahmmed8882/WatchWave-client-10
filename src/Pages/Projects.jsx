@@ -1,15 +1,21 @@
 import Marquee from "react-fast-marquee";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import ReactStarsRating from "react-awesome-stars-rating";
+import useAuth from "../Utils/AuthHelper";
+import Product404 from "../Components/404Product/Product404";
 
 const Projects = () => {
+  const {loading} = useAuth()
   const brandData = useLoaderData();
   const navigate = useNavigate()
-  const brand = brandData.brand;
-  // const {advertisementImages} = brand.fantasy[0]
-  const products = brand?.projects[0]?.products;
-  // console.log(brand)
-  // console.log(advertisementImages)
+  // const brand = brandData?.brand;
+  const products = brandData?.brand?.projects[0].products
+
+  if(loading){
+    return
+  }
+
+
   const advertisementImages = [
     "https://th.bing.com/th/id/OIP.vY4Tb1g5nojyL8GyX-mplAHaEK?pid=ImgDet&rs=1",
     "https://th.bing.com/th/id/OIP.HZB9lVSOWtWPrlm-dcBBKAHaE7?pid=ImgDet&rs=1",
@@ -19,7 +25,6 @@ const Projects = () => {
 
 
   // handle project
-  console.log()
   const handleDetails = (e,name) =>{
     e.preventDefault()
     navigate(`/project/${name}`)
@@ -30,10 +35,21 @@ const Projects = () => {
     navigate(`/update/${name}`)
   }
 
+
+
   return (
     <div>
-      <div className="project-cover">
-        <h1>projects {brandData.brand.genreName}</h1>
+      <div className="project-cover flex justify-center flex-col items-center">
+          <div className="lg:text-center">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl bottom-mark md:w-[500px] md:mx-auto">
+          {brandData?.brand?.genreName}
+          </p>
+          <p className="mt-4 max-w-2xl text-xl text-gray-200 lg:mx-auto">
+            WatchWave is your one-stop destination for streaming the latest
+            movies and dramas, just like Netflix. We offer a wide selection of
+            content.
+          </p>
+        </div>
       </div>
       <Marquee speed={40} className="cursor-pointer ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -56,28 +72,34 @@ const Projects = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-4 gap-5 pb-8 px-3">
-        {products?.map((product, idx) => (
-          <div key={idx} className={`cursor-pointer shadow-xl pb-2`}>
-            <img className="h-[150px] w-full object-cover rounded-t-lg" src={advertisementImages[idx]} alt="" />
-            <div className={` py-3 px-3 space-y-2 flex flex-col justify-around`} key={idx}>
-              <h1 className="text-[22px]">name: {product.Name}</h1>
-              {/* <p>{}</p> */}
+        {
+          products?(
+            products.map((product, idx) => (
+              <div key={idx} className={`cursor-pointer shadow-xl pb-2`}>
+                <img className="h-[150px] w-full object-cover rounded-t-lg" src={advertisementImages[idx]} alt="" />
+                <div className={` py-3 px-3 space-y-2 flex flex-col justify-around`} key={idx}>
+                  <h1 className="text-[22px] text-black">name: {product.Name}</h1>
+                  {/* <p className="text-black">{}</p> */}
+    
+                  <p className="text-black">Type: {product.Type}</p>
+                  <p className="text-black">Price:{product.Price}</p>
+                  <div className="flex items-center gap-3">
+                    <p className="text-black">{product.Rating}</p>
+                    <ReactStarsRating
+                      className="flex"
+                      value={product.Rating}></ReactStarsRating>
+                  </div>
+                    <div className="flex gap-3 pt-2">
+                    <button onClick={()=>handleUpdate(product.Name)} className=" p-2 text-[15px] w-full border-none outline-none active:scale-95 transition-all bg-indigo-500 hover:bg-indigo-700 text-white">Update</button>
+                    <button onClick={(event)=>handleDetails(event,product.Name)} className=" p-2 w-full active:scale-95 transition-all bg-indigo-500 hover:bg-indigo-700 text-[15px] border-none outline-none text-white">Details</button>
+                  </div>
+                </div>
+              </div>
+            ))
+  
+          ):<div className="absolute w-full"><Product404></Product404></div>
 
-              <p>Type: {product.Type}</p>
-              <p>Price:{product.Price}</p>
-              <div className="flex items-center gap-3">
-                <p>{product.Rating}</p>
-                <ReactStarsRating
-                  className="flex"
-                  value={product.Rating}></ReactStarsRating>
-              </div>
-              <div className="flex gap-3 pt-2">
-                <button onClick={()=>handleUpdate(product.Name)} className=" p-2 text-[15px] w-full border-none outline-none active:scale-95 transition-all bg-indigo-500 hover:bg-indigo-700 text-white">Update</button>
-                <button onClick={(event)=>handleDetails(event,product.Name)} className=" p-2 w-full active:scale-95 transition-all bg-indigo-500 hover:bg-indigo-700 text-[15px] border-none outline-none text-white">Details</button>
-              </div>
-            </div>
-          </div>
-        ))}
+        }
       </div>
     </div>
   );

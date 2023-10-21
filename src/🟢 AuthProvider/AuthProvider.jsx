@@ -21,7 +21,7 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("https://watch-wave-g0c1k5rt2-shakil-ahmmeds-projects.vercel.app/")
+    fetch("https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app/")
       .then((res) => res.json())
       .then((data) => {
         if (data) {
@@ -31,6 +31,9 @@ const AuthProvider = ({ children }) => {
       })
       .catch((err) => console.log(err));
   }, []);
+
+  console.log(loading);
+  // console.log(brands[0]?.brand?.projects[0].products)
 
   const fantasy = brands[0];
   const comedy = brands[1];
@@ -78,12 +81,10 @@ const AuthProvider = ({ children }) => {
     const unsubcribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-        console.log(user);
+        // console.log(currentUser);
       }
       setAuthLoading(false);
     });
-
-    console.log(authLoading);
 
     return () => unsubcribe();
   }, []);
@@ -99,7 +100,6 @@ const AuthProvider = ({ children }) => {
     user,
     authLoading,
   };
-  console.log(authLoading);
   return (
     <div>
       <AuthContext.Provider value={allInOne}>{children}</AuthContext.Provider>

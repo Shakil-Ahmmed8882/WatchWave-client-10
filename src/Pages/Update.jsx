@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import swal from "sweetalert";
 
 const Update = () => {
   const { name } = useParams();
+  const [defaultData, setDefaultData] = useState({});
+
   const handleUpdate = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -15,7 +18,7 @@ const Update = () => {
     console.log(brandData);
 
     fetch(
-      `https://watch-wave-g0c1k5rt2-shakil-ahmmeds-projects.vercel.app//update/${name}`,
+      `https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app/update/${name}`,
       {
         method: "PATCH",
         headers: {
@@ -35,6 +38,19 @@ const Update = () => {
       });
   };
 
+  fetch(
+    `https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app/update/${name}`
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      if (data) {
+        setDefaultData(data);
+      }
+    })
+    .catch((err) => console.error(err));
+  
+    const {Image,Name,Type,Price,Rating} = defaultData; 
+
   return (
     <div className="add-product-cover absolute top-0 -z-10 flex">
       <form
@@ -48,7 +64,7 @@ const Update = () => {
                 <span className="label text-gray-400">Image URL</span>
               </label>
               <input
-                defaultValue={"a"}
+                defaultValue={Image}
                 type="text"
                 className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
                 name="photo"
@@ -60,7 +76,7 @@ const Update = () => {
                 <span className="label text-gray-400">Name</span>
               </label>
               <input
-                defaultValue={"a"}
+                defaultValue={Name}
                 type="text"
                 className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
                 name="name"
@@ -72,7 +88,7 @@ const Update = () => {
                 <span className="label text-gray-400">Brand Name</span>
               </label>
               <input
-                defaultValue={"a"}
+                defaultValue={defaultData['Brand Name']}
                 type="text"
                 className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
                 name="brand-name"
@@ -86,7 +102,7 @@ const Update = () => {
                 <span className="label text-gray-400">Type</span>
               </label>
               <input
-                defaultValue={"a"}
+                defaultValue={Type}
                 type="text"
                 className=" bg-transparent outline-none my-3 bottom-line w-full" // Added w-full class
                 name="type"
@@ -98,7 +114,7 @@ const Update = () => {
                 <span className="label text-gray-400">Price</span>
               </label>
               <input
-                defaultValue={3}
+                defaultValue={Price}
                 type="number"
                 className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
                 name="price"
@@ -110,7 +126,7 @@ const Update = () => {
                 <span className="label text-gray-400">Short Description</span>
               </label>
               <input
-                defaultValue={"a"}
+                defaultValue={Rating}
                 type="text"
                 className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
                 name="description"
@@ -119,7 +135,7 @@ const Update = () => {
           </div>
         </div>
         {/* Rating */}
-        <div className="form-control">
+        {/* <div className="form-control">
           <label className="label">
             <span className="label text-gray-400">Rating</span>
           </label>
@@ -129,7 +145,7 @@ const Update = () => {
             className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
             name="rating"
           />
-        </div>
+        </div> */}
         {/* Submit Button */}
         <div className="form-control mt-6">
           <button className="btn btn-primary">Update</button>

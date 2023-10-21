@@ -1,4 +1,3 @@
-
 const Footer = () => {
   return (
     <section className="flex flex-col h-screen lg:justify-end font-poppins">
@@ -12,7 +11,11 @@ const Footer = () => {
                 About WatchWave
               </a>
               <p className="text-base font-normal leading-6 text-gray-300 lg:w-64 dark:text-gray-400">
-                Welcome to WatchWave, where people come to watch their favorite movies and dramas. We provide a wide selection of top-quality entertainment to keep you entertained. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst.
+                Welcome to WatchWave, where people come to watch their favorite
+                movies and dramas. We provide a wide selection of top-quality
+                entertainment to keep you entertained. Lorem ipsum dolor sit
+                amet, consectetur adipiscing elit. In hac habitasse platea
+                dictumst.
               </p>
               <div className="flex items-center mt-4">
                 <a href="#">
@@ -39,12 +42,11 @@ const Footer = () => {
               </div>
             </div>
             <div className="w-full px-4 md:w-1/4 lg:w-2/12 mb-11 lg:mb-0">
-              <h2 className="mb-4 text-xl font-bold text-gray-200 dark:text-gray-400">
+              <h1 className="mb-4 text-xl font-bold text-gray-200 dark:text-gray-400">
                 Quick Links
-              </h2>
+              </h1>
               <ul>
-                <li
-                  className="flex items-center mb-4 ">
+                <li className="flex items-center mb-4 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -104,9 +106,9 @@ const Footer = () => {
               </ul>
             </div>
             <div className="w-full px-4 md:w-1/4 lg:w-2/12 lg:mb-0">
-              <h2 className="mb-4 text-xl font-bold text-gray-200 dark:text-gray-400">
+              <h1 className="mb-4 text-xl font-bold text-gray-200 dark:text-gray-400">
                 Features
-              </h2>
+              </h1>
               <ul>
                 <li className="flex items-center mb-4 ">
                   <svg
@@ -168,9 +170,9 @@ const Footer = () => {
               </ul>
             </div>
             <div className="w-full px-4 lg:block hidden mb-2 lg:mb-0 md:w-1/3 lg:w-4/12">
-              <h2 className="mb-4 text-lg font-bold text-gray-200 dark:text-gray-400">
+              <h1 className="mb-4 text-lg font-bold text-gray-200 dark:text-gray-400">
                 Gallery
-              </h2>
+              </h1>
               <div className="flex flex-wrap items-center gap-3">
                 <img
                   src="https://th.bing.com/th/id/OIP.ZneFCUzw81CdNcHjw9czdQHaKt?pid=ImgDet&rs=1"
@@ -211,8 +213,7 @@ const Footer = () => {
         <span>© Copyright 2023 . All Rights Reserved</span>
       </div>
     </section>
-  
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
