@@ -5,10 +5,10 @@ const LocationInfo = () => {
     <div className=" py-12" id="location">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl bottom-mark md:w-[500px] md:mx-auto">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl dark:text-white  bottom-mark md:w-[500px] md:mx-auto">
             WatchWave Cinema
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:text-white">
             WatchWave is your one-stop destination for streaming the latest
             movies and dramas, just like Netflix. We offer a wide selection of
             content.
@@ -36,10 +36,10 @@ const LocationInfo = () => {
                 </div>
               </div>
               <div className="ml-4">
-                <dt className="text-lg leading-6 font-medium text-gray-900">
+                <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
                   FIND US
                 </dt>
-                <dd className="mt-2 text-base text-gray-500">
+                <dd className="mt-2 text-base text-gray-500   dark:text-gray-200">
                   123 Main St, Suite 100
                   <br />
                   Anytown, USA 12345
@@ -66,10 +66,10 @@ const LocationInfo = () => {
                 </div>
               </div>
               <div className="ml-4">
-                <dt className="text-lg leading-6 font-medium text-gray-900">
+                <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
                   CONTACT US IF ANY ISSUE
                 </dt>
-                <dd className="mt-2 text-base text-gray-500">(555) 555-5555</dd>
+                <dd className="mt-2 text-base  dark:text-white" dark:text-white>(555) 555-5555</dd>
               </div>
             </div>
 
@@ -98,7 +98,7 @@ const LocationInfo = () => {
 -gray-900">
                   Email
                 </dt>
-                <dd className="mt-2 text-base text-gray-500">
+                <dd className="mt-2 text-base text-gray-500 dark:text-white">
                   info@ourstore.com
                 </dd>
               </div>
@@ -123,10 +123,10 @@ const LocationInfo = () => {
                 </div>
               </div>
               <div className="ml-4">
-                <dt className="text-lg leading-6 font-medium text-gray-900">
+                <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
                   Store Hours
                 </dt>
-                <dd className="mt-2 text-base text-gray-500">
+                <dd className="mt-2 text-base text-gray-500 dark:text-white">
                   Monday - Friday: 9am to 8pm
                   <br />
                   Saturday: 10am to 6pm
@@ -154,10 +154,10 @@ const LocationInfo = () => {
                 </div>
               </div>
               <div className="ml-4">
-                <dt className="text-lg leading-6 font-medium text-gray-900">
+                <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
                   CHINEMA HALL
                 </dt>
-                <dd className="mt-2 text-base text-gray-500">
+                <dd className="mt-2 text-base text-gray-500 dark:text-white">
                   Monday - Friday: 9am to 8pm
                   <br />
                   Saturday: 10am to 6pm
@@ -185,10 +185,10 @@ const LocationInfo = () => {
                 </div>
               </div>
               <div className="ml-4">
-                <dt className="text-lg leading-6 font-medium text-gray-900">
+                <dt className="text-lg leading-6 font-medium text-gray-900 dark:text-white">
                   ACTORS
                 </dt>
-                <dd className="mt-2 text-base text-gray-500">
+                <dd className="mt-2 text-base text-gray-500 dark:text-white">
                   Monday - Friday: 9am to 8pm
                   <br />
                   Saturday: 10am to 6pm

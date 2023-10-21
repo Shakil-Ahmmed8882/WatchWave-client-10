@@ -63,6 +63,7 @@ const Navbar = () => {
       {
         user && !isLogout?privateNavLinks:''
       }
+          <ThemeToggle></ThemeToggle>
     </>
   );
   

@@ -7,10 +7,10 @@ const Footer = () => {
             <div className="w-full px-4 mb-11 md:w-1/2 lg:w-4/12 lg:mb-0">
               <a
                 href="#"
-                className="inline-block mb-4 text-xl font-bold text-gray-200 dark:text-gray-400">
+                className="inline-block mb-4 text-xl font-bold text-gray-200 dark:text-gray-200">
                 About WatchWave
               </a>
-              <p className="text-base font-normal leading-6 text-gray-300 lg:w-64 dark:text-gray-400">
+              <p className="text-base font-normal leading-6 text-gray-300 lg:w-64 dark:text-gray-200">
                 Welcome to WatchWave, where people come to watch their favorite
                 movies and dramas. We provide a wide selection of top-quality
                 entertainment to keep you entertained. Lorem ipsum dolor sit
@@ -42,7 +42,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="w-full px-4 md:w-1/4 lg:w-2/12 mb-11 lg:mb-0">
-              <h1 className="mb-4 text-xl font-bold text-gray-200 dark:text-gray-400">
+              <h1 className="mb-4 text-xl font-bold text-gray-200 dark:text-gray-200">
                 Quick Links
               </h1>
               <ul>
@@ -52,7 +52,7 @@ const Footer = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    className="w-3 h-3 mr-1 text-white dark:text-gray-400 bi bi-chevron-right"
+                    className="w-3 h-3 mr-1 text-white dark:text-gray-200 bi bi-chevron-right"
                     viewBox="0 0 16 16">
                     <path
                       fillRule="evenodd"
@@ -61,7 +61,7 @@ const Footer = () => {
                   </svg>
                   <a
                     href="#"
-                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-400">
+                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-200">
                     Home
                   </a>
                 </li>
@@ -71,7 +71,7 @@ const Footer = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    className="w-3 h-3 mr-1 text-white dark:text-gray-400 bi bi-chevron-right"
+                    className="w-3 h-3 mr-1 text-white dark:text-gray-200 bi bi-chevron-right"
                     viewBox="0 0 16 16">
                     <path
                       fillRule="evenodd"
@@ -80,7 +80,7 @@ const Footer = () => {
                   </svg>
                   <a
                     href="#"
-                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-400">
+                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-200">
                     About Us
                   </a>
                 </li>
@@ -90,7 +90,7 @@ const Footer = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    className="w-3 h-3 mr-1 text-white dark:text-gray-400 bi bi-chevron-right"
+                    className="w-3 h-3 mr-1 text-white dark:text-gray-200 bi bi-chevron-right"
                     viewBox="0 0 16 16">
                     <path
                       fillRule="evenodd"
@@ -99,14 +99,14 @@ const Footer = () => {
                   </svg>
                   <a
                     href="#"
-                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-400">
+                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-200">
                     Services
                   </a>
                 </li>
               </ul>
             </div>
             <div className="w-full px-4 md:w-1/4 lg:w-2/12 lg:mb-0">
-              <h1 className="mb-4 text-xl font-bold text-gray-200 dark:text-gray-400">
+              <h1 className="mb-4 text-xl font-bold text-gray-200 dark:text-gray-200">
                 Features
               </h1>
               <ul>
@@ -116,7 +116,7 @@ const Footer = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    className="w-3 h-3 mr-1 text-white dark:text-gray-400 bi bi-chevron-right"
+                    className="w-3 h-3 mr-1 text-white dark:text-gray-200 bi bi-chevron-right"
                     viewBox="0 0 16 16">
                     <path
                       fillRule="evenodd"
@@ -125,7 +125,7 @@ const Footer = () => {
                   </svg>
                   <a
                     href="#"
-                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-400">
+                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-200">
                     Products
                   </a>
                 </li>
@@ -135,7 +135,7 @@ const Footer = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    className="w-3 h-3 mr-1 text-white dark:text-gray-400 bi bi-chevron-right"
+                    className="w-3 h-3 mr-1 text-white dark:text-gray-200 bi bi-chevron-right"
                     viewBox="0 0 16 16">
                     <path
                       fillRule="evenodd"
@@ -144,7 +144,7 @@ const Footer = () => {
                   </svg>
                   <a
                     href="#"
-                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-400">
+                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-200">
                     Business
                   </a>
                 </li>
@@ -154,7 +154,7 @@ const Footer = () => {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    className="w-3 h-3 mr-1 text-white dark:text-gray-400 bi bi-chevron-right"
+                    className="w-3 h-3 mr-1 text-white dark:text-gray-200 bi bi-chevron-right"
                     viewBox="0 0 16 16">
                     <path
                       fillRule="evenodd"
@@ -163,14 +163,14 @@ const Footer = () => {
                   </svg>
                   <a
                     href="#"
-                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-400">
+                    className="inline-block text-base font-normal text-gray-300 dark:text-gray-200">
                     Firm
                   </a>
                 </li>
               </ul>
             </div>
             <div className="w-full px-4 lg:block hidden mb-2 lg:mb-0 md:w-1/3 lg:w-4/12">
-              <h1 className="mb-4 text-lg font-bold text-gray-200 dark:text-gray-400">
+              <h1 className="mb-4 text-lg font-bold text-gray-200 dark:text-gray-200">
                 Gallery
               </h1>
               <div className="flex flex-wrap items-center gap-3">
@@ -209,7 +209,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="py-4 text-center text-gray-300 bg-black dark:bg-gray-800 dark:text-gray-400">
+      <div className="py-4 text-center text-gray-300 bg-black dark:bg-gray-800 dark:text-gray-200">
         <span>© Copyright 2023 . All Rights Reserved</span>
       </div>
     </section>

@@ -61,7 +61,7 @@ const Projects = () => {
       <div className="flex justify-center flex-col items-center pt-20">
       <h1 className="text-9xl font-bold text-center w-32 h-32 bg-indigo-200 p-7 rounded-full"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/b6/ad/61/b6ad617a-0024-3066-179f-8c7d848f4de2/source/512x512bb.jpg" alt="" /></h1>
       <div className="lg:text-center">
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl bottom-mark md:w-[500px] md:mx-auto">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl bottom-mark md:w-[500px] dark:text-white md:mx-auto">
             WatchWave Cinema
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">

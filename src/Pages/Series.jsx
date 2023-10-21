@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import useAuth from "../Utils/AuthHelper";
+import Loading from "../Components/Spinner/Loading";
 
 const Series = () => {
   const { loading, brands } = useAuth();
@@ -7,7 +8,7 @@ const Series = () => {
   const array = Object.values(brands);
 
   if (loading) {
-    return <p>Loading....</p>;
+    return <Loading></Loading>
   }
 
   //Image for testing
@@ -30,7 +31,7 @@ const Series = () => {
     navigate(`/brand/${_id}`);
   };
   return (
-    <div className="">
+    <div className="md:max-w-6xl mx-auto">
       <div className="md:flex py-8">
         <div className="flex flex-1 flex-wrap py-11 flex-col-reverse md:flex-row md:h-[70vh] items-center w-full p-3 ">
           <div className="flex-1 relative space-y-4 md:ml-5 py-8  md:py-0">
@@ -71,18 +72,18 @@ const Series = () => {
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="text-indigo-500 w-12 h-12 mb-3 inline-block"
                     viewBox="0 0 24 24">
                     <path d="M8 17l4 4 4-4m-4-5v9"></path>
                     <path d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"></path>
                   </svg>
-                  <h1 className="title-font font-medium text-3xl text-gray-900">
+                  <h1 className="title-font font-medium text-3xl text-gray-900 dark:text-white">
                     2.7K
                   </h1>
-                  <p className="leading-relaxed">Downloads</p>
+                  <p className="leading-relaxed dark:text-white">Downloads</p>
                 </div>
               </div>
               <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -90,19 +91,19 @@ const Series = () => {
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="text-indigo-500 w-12 h-12 mb-3 inline-block"
                     viewBox="0 0 24 24">
                     <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
                     <circle cx="9" cy="7" r="4"></circle>
                     <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
                   </svg>
-                  <h1 className="title-font font-medium text-3xl text-gray-900">
+                  <h1 className="title-font font-medium text-3xl text-gray-900 dark:text-white">
                     1.3K
                   </h1>
-                  <p className="leading-relaxed">Users</p>
+                  <p className="leading-relaxed dark:text-white">Users</p>
                 </div>
               </div>
               <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -110,18 +111,18 @@ const Series = () => {
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="text-indigo-500 w-12 h-12 mb-3 inline-block"
                     viewBox="0 0 24 24">
                     <path d="M3 18v-6a9 9 0 0118 0v6"></path>
                     <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h1zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2h1z"></path>
                   </svg>
-                  <h1 className="title-font font-medium text-3xl text-gray-900">
+                  <h1 className="title-font font-medium text-3xl text-gray-900 dark:text-white"> 
                     74
                   </h1>
-                  <p className="leading-relaxed">Files</p>
+                  <p className="leading-relaxed dark:text-white">Files</p>
                 </div>
               </div>
               <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -129,17 +130,17 @@ const Series = () => {
                   <svg
                     fill="none"
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     className="text-indigo-500 w-12 h-12 mb-3 inline-block"
                     viewBox="0 0 24 24">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                   </svg>
-                  <h1 className="title-font font-medium text-3xl text-gray-900">
+                  <h1 className="title-font font-medium text-3xl text-gray-900 dark:text-white">
                     46
                   </h1>
-                  <p className="leading-relaxed">Places</p>
+                  <p className="leading-relaxed dark:text-white">Places</p>
                 </div>
               </div>
             </div>
@@ -147,7 +148,7 @@ const Series = () => {
         </section>
       </div>
       <div className="lg:text-center mb-8">
-        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl bottom-mark md:w-[500px] md:mx-auto">
+        <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl bottom-mark md:w-[500px] md:mx-auto dark:text-white">
           WatchWave Cinema
         </p>
         <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">

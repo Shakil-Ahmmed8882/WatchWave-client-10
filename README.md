@@ -27,7 +27,7 @@ WatchWave is built using modern technologies, including:
 
 - **Vercel**: The application is deployed on Vercel, ensuring reliable and scalable hosting.
 
-[**Live Link**](watchwave.surge.sh) - Add the live link to your WatchWave website here.
+[**Live Link**](https://watchwave.surge.sh/) - Add the live link to your WatchWave website here.
 
 ## Thank you
 Thank you for taking the time to explore our project. We appreciate your interest and look forward to providing you with a delightful watching experience. 🍿🎬

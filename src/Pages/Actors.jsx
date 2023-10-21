@@ -5,10 +5,10 @@ const ImageGrid = () => {
   return (
 <div>
 <div className="lg:text-center pt-11 px-3">
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl bottom-mark md:w-[500px] md:mx-auto">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl bottom-mark dark:text-white md:w-[500px] md:mx-auto">
             Actors / Actress
           </p>
-          <p className="mt-4 max-w-2xl pb-11 text-xl text-gray-500 lg:mx-auto">
+          <p className="mt-4 max-w-2xl pb-11 text-xl text-gray-500 lg:mx-auto dark:text-white">
             Here is the most renowned Ators and Actress playing amazing role at any character. Take your chance
           </p>
         </div>

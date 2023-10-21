@@ -2,7 +2,7 @@ import arrow from "./arrow.svg";
 import "./Banner.css";
 const Banner = () => {
   return (
-      <div id="banner" className="flex dark:bg-gray-800 gap-3 flex-col-reverse md:flex-row dark:text-white text-white md:text-black  sm:text-center md:text-left banner-bg px-3 md:mt-5">
+      <div id="banner" className="flex dark:bg-gray-800 gap-3 flex-col-reverse md:flex-row dark:text-white text-white md:text-black  sm:text-center md:text-left banner-bg px-3 ">
       <div className="flex-1 space-y-4">
         <h1 id="bannerCaption" className="underline-style text-[20px] sm:text-3xl md:text-4xl font-bold mb-2">
           WATCH TV SHOWS OR MOVIES ANYWHERE. ANYTIME
@@ -142,26 +142,26 @@ const Banner = () => {
               </defs>
             </svg>
           </span>
-          <div className="text-sm-light-text" id="description50k">
+          <div className="text-sm-light-text dark:text-gray-300 dark:bg-gray-800" id="description50k">
           Amazing wizarding collection of movies got released in this year 2023. We always emphasise on viewers&apps; convinience
           </div>
         </div>
       </div>
       <div className="md:grid w-full right-container hidden md:grid-cols-2 gap-3 flex-1 h-[90vh]">
         <div className=" bg-1 bg-cyan-300   rounded-xl  row-span-2">
-          <div className="floating-text">
+          <div className="floating-text dark:bg-gray-900">
             <h1 className="font-bold my-1 text-[16px]">Friends</h1>
             <p>Instanstaneously got people heart with the quality story of frinds bonding</p>
           </div>
         </div>
         <div className="bg-slate-200   rounded-xl  bg-2">
-          <div className="floating-text">
+          <div className="floating-text dark:bg-gray-900">
             <h1 className="font-bold my-1 text-[16px]">The Dinasour</h1>
             <p>Fun way to teach your kids about the world history of dinasour.</p>
           </div>
         </div>
         <div className="bg-black    rounded-xl bg-3">
-          <div className="floating-text">
+          <div className="floating-text dark:bg-gray-900">
               <h1 className="font-bold my-1 text-[16px]">War Criminals</h1>
             <p>History of World war in 1945 which violated the mankind </p>
           </div>
