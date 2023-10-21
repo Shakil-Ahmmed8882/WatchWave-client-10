@@ -1,33 +1,33 @@
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
 
-const themes = {
-  dark: 'light',
-  light: 'dark'
-}
+// const themes = {
+//   dark: 'light',
+//   light: 'dark'
+// }
 
-const useTheme = () => {
-  const [theme, setTheme] = useState('light')
+// const useTheme = () => {
+//   const [theme, setTheme] = useState('light')
 
-  const toggleTheme = () => {
-    const _theme = themes[theme]
-    localStorage.setItem('theme', _theme)
-    updateTheme(_theme)
-  }
+//   const toggleTheme = () => {
+//     const _theme = themes[theme]
+//     localStorage.setItem('theme', _theme)
+//     updateTheme(_theme)
+//   }
 
-  const updateTheme = (name) => {
-    setTheme(name)
-    document.querySelector('html')
-      ?.classList.remove(themes[name])
+//   const updateTheme = (name) => {
+//     setTheme(name)
+//     document.querySelector('html')
+//       ?.classList.remove(themes[name])
     
-    document.querySelector('html')
-      ?.classList.add(name)
-  } 
-  useEffect(() => {
-    const _theme = localStorage.getItem('theme') || 'dark'
-    updateTheme(_theme)
-  }, [])
+//     document.querySelector('html')
+//       ?.classList.add(name)
+//   } 
+//   useEffect(() => {
+//     const _theme = localStorage.getItem('theme') || 'dark'
+//     updateTheme(_theme)
+//   }, [])
 
-  return { theme, toggleTheme }
-}
+//   return { theme, toggleTheme }
+// }
 
-export default useTheme;
+// export default useTheme;

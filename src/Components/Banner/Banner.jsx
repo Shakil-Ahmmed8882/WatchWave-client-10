@@ -2,12 +2,12 @@ import arrow from "./arrow.svg";
 import "./Banner.css";
 const Banner = () => {
   return (
-      <div id="banner" className="flex BG-cover gap-3 flex-col-reverse md:flex-row text-white md:text-black  sm:text-center md:text-left banner-bg px-3 md:mt-5">
+      <div id="banner" className="flex dark:bg-gray-800 gap-3 flex-col-reverse md:flex-row dark:text-white text-white md:text-black  sm:text-center md:text-left banner-bg px-3 md:mt-5">
       <div className="flex-1 space-y-4">
         <h1 id="bannerCaption" className="underline-style text-[20px] sm:text-3xl md:text-4xl font-bold mb-2">
           WATCH TV SHOWS OR MOVIES ANYWHERE. ANYTIME
         </h1>
-        <p id="bannerDescription" className="text-sm-light-text md:text-light-text">
+        <p id=""  className="text-sm-light-text dark:text-white md:text-light-text">
           Enjoy the freedom to watch your favorite TV shows and movies wherever
           and whenever you want with our extensive collection of content.
         </p>

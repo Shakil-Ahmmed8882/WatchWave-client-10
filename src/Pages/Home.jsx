@@ -10,7 +10,7 @@ import Series from "./Series";
 const Home = () => {
 
   return (
-    <div>
+    <div className="dark:bg-gray-800 dark:text-white">
       <div className="max-w-6xl mx-auto">
       <Banner></Banner>
       </div>

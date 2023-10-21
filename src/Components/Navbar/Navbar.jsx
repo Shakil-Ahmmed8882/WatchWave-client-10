@@ -3,7 +3,8 @@ import useAuth from "../../Utils/AuthHelper";
 import "./navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import '../Banner/banner.css'
-import Toggle from "../Toggler/Toggle";
+import ThemeToggle from "../Theme/DarkTheme";
+
 
 const Navbar = () => {
   const { user, LogOut} = useAuth();
@@ -39,12 +40,15 @@ const Navbar = () => {
       <li className="text-gray-500">
         <NavLink to="/cart">My-cart</NavLink>
       </li>
+      <li>
+        {/* <ThemeToggle></ThemeToggle> */}
+      </li>
     </>
   );
 
   const navLinks = (
     <>
-      <li className="text-gray-500">
+      <li className="dark:text-gray-200 text-gray-500">
         <NavLink to="/">home</NavLink>
       </li>
       <li className="text-gray-500">
@@ -53,7 +57,7 @@ const Navbar = () => {
       <li className="text-gray-500">
         <NavLink to="/addProducts">Add Products</NavLink>
       </li>
-      <Toggle></Toggle>
+      {/* <ThemeToggle></ThemeToggle> */}
       <li>
       </li>
       {
@@ -65,8 +69,8 @@ const Navbar = () => {
 
   
   return (
-    <div className="" id="navbar">
-      <div className={`navbar bg-transparent`} >
+    <div className="dark:bg-gray-800 dark:text-white" id="navbar" >
+      <div className={`navbar`} >
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

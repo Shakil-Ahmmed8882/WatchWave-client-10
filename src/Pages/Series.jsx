@@ -48,7 +48,7 @@ const Series = () => {
               </span>
             </div>
             <h1>New Episod coming on Thursday</h1>
-            <p className="text-sm-light-text pr-16">
+            <p className="text-sm-light-text pr-16 dark:text-white">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Accusantium assumenda cum aperiam cumque eatae?
             </p>
