@@ -21,18 +21,17 @@ const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app/")
+    fetch("https://watch-wave-five.vercel.app")
       .then((res) => res.json())
       .then((data) => {
-        if (data) {
           setBrands(data);
+          console.log(data)
           setLoading(false);
-        }
-      })
-      .catch((err) => console.log(err));
-  }, []);
+        })
+        .catch((err) => console.log(err));
+    }, []);
 
-  console.log(loading);
+  console.log(brands);
   // console.log(brands[0]?.brand?.projects[0].products)
 
   const fantasy = brands[0];

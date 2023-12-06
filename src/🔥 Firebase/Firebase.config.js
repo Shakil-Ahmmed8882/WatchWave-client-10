@@ -6,12 +6,12 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyArTq5JAZXQ46s8kONAHRnZzmWTA34CsF8",
-  authDomain: "watchwave-180c4.firebaseapp.com",
-  projectId: "watchwave-180c4",
-  storageBucket: "watchwave-180c4.appspot.com",
-  messagingSenderId: "351356733607",
-  appId: "1:351356733607:web:b3fac4e9bfd8039c5df382"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId:import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

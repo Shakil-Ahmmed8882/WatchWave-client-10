@@ -43,21 +43,20 @@ const router = createBrowserRouter([
           </Private>
         ),
       },
-    
+
       {
         path: "/cart",
-        element:<Private><MyCart></MyCart></Private> ,
-        loader: () =>
-          fetch(
-            "https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app/movies"
-          ),
+        element: (
+          <Private>
+            <MyCart></MyCart>
+          </Private>
+        ),
+        loader: () => fetch("https://watch-wave-five.vercel.app/movies"),
       },
       {
         path: "/brand/:id",
         loader: ({ params }) =>
-          fetch(
-            `https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app/brand/${params.id}`
-          ),
+          fetch(`https://watch-wave-five.vercel.app/brand/${params.id}`),
         element: <Projects></Projects>,
       },
       {
@@ -70,11 +69,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/project/:name",
-        element: <Details></Details>,
+        element: <Private><Details></Details></Private>
       },
       {
         path: "/update/:name",
-        element: <Update></Update>,
+        element: <Private><Update></Update></Private>
       },
       {
         path: "/login",

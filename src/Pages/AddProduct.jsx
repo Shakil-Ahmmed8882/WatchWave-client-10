@@ -27,16 +27,13 @@ const AddProducts = () => {
       return;
     }
 
-    fetch(
-      `https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app//${selectedBrand}`,
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(brandData),
-      }
-    )
+    fetch(`https://watch-wave-five.vercel.app/movie/${selectedBrand}`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(brandData),
+    })
       .then((res) => res.json())
       .then((data) => console.log(data))
       .catch((err) => console.error(err));

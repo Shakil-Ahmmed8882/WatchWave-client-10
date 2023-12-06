@@ -6,6 +6,8 @@ const Update = () => {
   const { name } = useParams();
   const [defaultData, setDefaultData] = useState({});
 
+
+  console.log(defaultData)
   const handleUpdate = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -15,18 +17,15 @@ const Update = () => {
       brandData[key] = value;
     });
 
-    console.log(brandData);
+    console.log(name);
 
-    fetch(
-      `https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app/update/${name}`,
-      {
-        method: "PATCH",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(brandData),
-      }
-    )
+    fetch(`https://watch-wave-five.vercel.app/update/${name}`, {
+      method: "PATCH",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(brandData),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount === 1) {
@@ -38,9 +37,7 @@ const Update = () => {
       });
   };
 
-  fetch(
-    `https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app/update/${name}`
-  )
+  fetch(`https://watch-wave-five.vercel.app/update/${name}`)
     .then((res) => res.json())
     .then((data) => {
       if (data) {
@@ -48,8 +45,8 @@ const Update = () => {
       }
     })
     .catch((err) => console.error(err));
-  
-    const {Image,Name,Type,Price,Rating} = defaultData; 
+
+  const { Image, Name, Type, Price, Rating } = defaultData;
 
   return (
     <div className="add-product-cover absolute top-0 -z-10 flex">
@@ -88,7 +85,7 @@ const Update = () => {
                 <span className="label text-gray-400">Brand Name</span>
               </label>
               <input
-                defaultValue={defaultData['Brand Name']}
+                defaultValue={defaultData["Brand Name"]}
                 type="text"
                 className=" bg-transparent outline-none my-3 bottom-line input-bordered w-full" // Added w-full class
                 name="brand-name"

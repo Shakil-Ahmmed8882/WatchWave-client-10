@@ -43,7 +43,7 @@ const MyCart = () => {
 
   const handleRemove = (e, _id) => {
     e.preventDefault();
-    console.log(_id)
+    console.log(_id);
 
     Swal.fire({
       title: "Are you sure?",
@@ -55,20 +55,17 @@ const MyCart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(
-          `https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app/movies/${_id}`,
-          {
-            method: "DELETE",
-          }
-          )
+        fetch(`https://watch-wave-five.vercel.app/movies/${_id}`, {
+          method: "DELETE",
+        })
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
               const remainingMovies = loadedMovies.filter(
                 (movie) => movie._id !== _id
-                );
-                setMovies(remainingMovies);
-                Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              );
+              setMovies(remainingMovies);
+              Swal.fire("Deleted!", "Your file has been deleted.", "success");
             }
           })
           .catch((err) => toast.error(err.toString()));

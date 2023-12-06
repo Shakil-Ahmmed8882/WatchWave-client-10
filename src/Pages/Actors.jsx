@@ -3,8 +3,8 @@
 
 const ImageGrid = () => {
   return (
-<div>
-<div className="lg:text-center pt-11 px-3">
+<div className="max-w-6xl mx-auto">
+<div className="lg:text-center pt-11 px-3 ">
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl bottom-mark dark:text-white md:w-[500px] md:mx-auto">
             Actors / Actress
           </p>

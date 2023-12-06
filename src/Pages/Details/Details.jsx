@@ -34,7 +34,7 @@ const Details = () => {
   // Function to add to the cart
   const handleAddToCart = (e) => {
     e.preventDefault();
-    fetch("https://watch-wave-nin5w3syw-shakil-ahmmeds-projects.vercel.app//", {
+    fetch("https://watch-wave-five.vercel.app", {
       method: "POST",
       headers: {
         "content-type": "application/json",

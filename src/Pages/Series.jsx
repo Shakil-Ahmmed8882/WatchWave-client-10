@@ -7,6 +7,10 @@ const Series = () => {
   const navigate = useNavigate();
   const array = Object.values(brands);
 
+
+  console.log(brands)
+
+  console.log(loading)
   if (loading) {
     return <Loading></Loading>
   }
@@ -64,7 +68,7 @@ const Series = () => {
             <div></div>
           </div>
         </div>
-        <section className="text-gray-700 flex-1 body-font">
+        <section className="text-gray-700 hidden md:flex-1 md:flex body-font">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap -m-4 text-center">
               <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -176,7 +180,7 @@ const Series = () => {
                 alt=""
               />
             </div>
-            <img className="md:w-full md:h-full " src={imgs[idx]} alt="" />
+            <img className="md:w-full object-cover md:h-full " src={imgs[idx]} alt="" />
           </div>
         ))}
       </div>
